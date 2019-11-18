@@ -10,7 +10,11 @@ CREATE TABLE users
  middle_name VARCHAR,
  last_name VARCHAR NOT NULL,
  start_date date DEFAULT CURRENT_TIMESTAMP,
- total_hours INTEGER NOT NULL
+ finish_date date,
+ mandate_hours INTEGER NOT NULL,
+ completed BOOLEAN NOT NULL DEFAULT 'false',
+ accumulative_hours INT DEFAULT 0,
+ last_active_date date
 );
 
 CREATE TABLE log
@@ -20,9 +24,11 @@ CREATE TABLE log
  user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
  start_time TIME NOT NULL,
  end_time TIME NOT NULL,
- accumulative_hours INTEGER NOT NULL,
+ daily_total DECIMAL(6,2) NOT NULL,
  notes TEXT
 );
+
+
 
 
 
