@@ -526,3 +526,9 @@ template {
 [hidden] {
   display: none;
 }
+
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Alata', sans-serif;
+}

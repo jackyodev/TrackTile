@@ -11,7 +11,7 @@ class NavBar extends Component{
   render (){
     return(
       <div className = 'nav'>
-          <NavLink id = "nav_menu" to="/" >Home</NavLink>
+          <NavLink id = "nav_menu" to="/signin" >Sign-In</NavLink>
           <NavLink id = "nav_menu" to='/lookup'>Look Up</NavLink>
           <NavLink id = "nav_menu" to="/reports" >Reports</NavLink>
       </div>

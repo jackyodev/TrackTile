@@ -25,7 +25,8 @@ CREATE TABLE log
  start_time TIME NOT NULL,
  end_time TIME NOT NULL,
  daily_total DECIMAL(6,2) NOT NULL,
- notes TEXT
+ notes TEXT,
+ staff_name VARCHAR
 );
 
 

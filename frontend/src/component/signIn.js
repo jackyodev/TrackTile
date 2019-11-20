@@ -1,23 +1,23 @@
 import React, { Component } from 'react'
+import Axios from 'axios'
+
+
 import Form from 'react-bootstrap/Form'
+
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import ReactDOM from 'react-dom';
-
 
 //css
 import 'bootstrap/dist/css/bootstrap.min.css';
-import body from './body';
-
-
 
 
 class SignIn extends Component {
   constructor(props) {
     super(props);
   }
+
 
   formChange = (event) => {
     let id = event.target.id
@@ -26,8 +26,22 @@ class SignIn extends Component {
   }
 
   submitButton = (event) => {
+    let {props} = this.props
+    let params = {
+      user_id: props.id,
+      entry_date: props.today_date,
+      time_in: props.time_in,
+      time_out: props.time_out,
+      notes: props.badge_number,
+      daily_total: props.daily_total,
+      staff_name: props.staff_name
+      
+    }
     event.preventDefault()
     console.log(this.props)
+    Axios.post('/log/add', params).then(()=>{
+      this.props.resetState()
+    })
   }
 
   computeDailyTotal = () => {
@@ -49,7 +63,13 @@ class SignIn extends Component {
   }
 
 
+  componentDidMount(){
+    this.props.setTime()
+  }
+
+
   render() {
+    let {props} = this.props
     return (
       <div className='form' >
         <h1> Community Services Sign In </h1>
@@ -60,7 +80,9 @@ class SignIn extends Component {
             <Col md="auto">
               <Form.Group>
                 <Form.Label> First Name </Form.Label>
-                <Form.Control id="first_name" type="text" placeholder="First Name" onBlur={(event) => {
+                <Form.Control value = {props.first_name} id="first_name" type="text" placeholder="First Name" onChange = {(event)=>{
+                  
+                }} onBlur={(event) => {
                   this.formChange(event)
                 }}></Form.Control>
               </Form.Group>
@@ -71,7 +93,7 @@ class SignIn extends Component {
             <Col xs lg="2">
               <Form.Group>
                 <Form.Label>Middle Name</Form.Label>
-                <Form.Control id="middle_name" type="text" placeholder="Middle Name" onBlur={(e) => {
+                <Form.Control value = {props.middle_name} id="middle_name" type="text" placeholder="Middle Name" onBlur={(e) => {
                   this.formChange(e)
                 }}></Form.Control>
               </Form.Group>
@@ -80,7 +102,7 @@ class SignIn extends Component {
             <Col xs lg="2">
               <Form.Group>
                 <Form.Label>Last Name</Form.Label>
-                <Form.Control id="last_name" type="text" placeholder="Last Name" onBlur={(e) => { this.formChange(e) }} ></Form.Control>
+                <Form.Control value = {props.last_name} id="last_name" type="text" placeholder="Last Name" onBlur={(e) => { this.formChange(e) }} ></Form.Control>
               </Form.Group>
             </Col>
           </Form.Row>
@@ -117,7 +139,7 @@ class SignIn extends Component {
               </Form.Control>
             </Col>
             <h3> Daily Total:</h3>
-            <h3> {this.props.props.daily_total.toFixed(2)} </h3>
+            <h3> {props.daily_total.toFixed(2)} </h3>
           </Form.Row>
 
 

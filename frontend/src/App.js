@@ -13,8 +13,7 @@ import {Switch, Route} from "react-router-dom";
 //components
 import './App.css';
 import Navi from './component/navi'
-import Body from './component/body.js'
-import User from './component/user.js';
+import CSSignin from './component/csSignIn.js'
 
 
 
@@ -27,9 +26,7 @@ class App extends Component {
       <> 
       <Navi />
       <Switch>
-       {/* <Route exact path = "/lookup" component = {About} ></Route> */}
-       <Route exact path = "/reports" component = { User } ></Route>
-       <Route path = "/*" component = { Body } />
+       <Route path = "/signin" component = { CSSignin } />
       </Switch>
       </>
 
