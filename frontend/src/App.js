@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 
 //add-on
 import {withRouter} from "react-router";
-import {Switch, Route} from "react-router-dom";
+import {Switch, Route, Link} from "react-router-dom";
 
 
 //css 
@@ -26,7 +26,15 @@ class App extends Component {
       <> 
       <Navi />
       <Switch>
+
        <Route path = "/signin" component = { CSSignin } />
+      <Route path = "/" render = {()=>
+      <div className = "home">
+        <h1> Volunteers Sign In Log </h1>
+        <Link id = "home_button" to ="/signin"> Start </Link>
+        </div>
+
+      } />
       </Switch>
       </>
 

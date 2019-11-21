@@ -1,22 +1,38 @@
-.App {
+* {
+  font-family: Alata !important;
+}
+
+
+.home {
   text-align: center;
+  height: 99vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.7)),
+    url('https://www.urbanadvantagenyc.org/wp-content/uploads/2017/11/QBG-Pic6.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
+.home h1 {
+  /* margin: auto; */
+  padding: 70px 0;
+  font-size: 5rem;
+
+  color: #A1B936;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home #home_button {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-size: 3rem;
+  background-color: #A1B936;
+  width: 20rem;
+  border: black 2px solid;
 }
 
-.App-link {
-  color: #09d3ac;
+.home #home_button:hover {
+  background-color: orange;
+
 }

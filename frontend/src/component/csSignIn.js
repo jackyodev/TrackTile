@@ -151,7 +151,7 @@ class CSSignIn extends Component {
   }
 
   userSelectForm = (event) => {
-    let array = ["Sara", 'Wil', 'Gil', 'James', 'Josh', 'Tamaria', 'Armando', 'Ralph', 'Dylan'];
+    let array = ["User 1", "User 2", "User 3", "User 4", "User 5"];
 
     let listUser = array.map((user, i) =>
 
@@ -161,9 +161,12 @@ class CSSignIn extends Component {
       } key={i}> {user} </li>);
 
     return (
-      <ul className="employees">
-        {listUser}
-      </ul>
+      <>
+        <h1> Team Lead</h1>
+        <ul className="team_lead">
+          {listUser}
+        </ul>
+      </>
     )
   }
 
@@ -193,11 +196,10 @@ class CSSignIn extends Component {
     }
 
     else if (this.state.new === true) {
-      return ( 
+      return (
         <>
-        <h1> YO </h1>
-        <NewForm />
-        <h2> TOP </h2>
+          <h1> New Volunteer Sign In </h1>
+          <NewForm />
         </>
       )
     }

@@ -1,21 +1,26 @@
-body {
- background-color: #F7F7F7;
-}
-
 .nav {
- font-size: 1.2rem;
- height: 4.5rem;
+ font-family: Alata, sans-serif;
+ font-size: 1.5rem;
+ height: 4rem;
  width: auto;
  border: 1px solid black;
  text-align: center;
  display: flex;
+ background-color: #4C3F3A;
+ -webkit-box-shadow: -1px 1px 14px -3px rgba(0, 0, 0, 0.75);
+ -moz-box-shadow: -1px 1px 14px -3px rgba(0, 0, 0, 0.75);
+ box-shadow: -1px 1px 14px -3px rgba(0, 0, 0, 0.75);
 }
-
 
 #nav_menu {
  justify-content: center;
  margin: auto;
  text-decoration: none;
+ color: #AEBC39;
 }
 
+#nav_menu:hover {
+ color: #F07B39;
+
+}
 
