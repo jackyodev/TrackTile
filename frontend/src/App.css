@@ -1,6 +1,8 @@
 * {
   font-family: Alata !important;
+  color: #A1B936;
 }
+
 
 
 .home {
@@ -8,9 +10,10 @@
   height: 99vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.7)),
-    url('https://www.urbanadvantagenyc.org/wp-content/uploads/2017/11/QBG-Pic6.png');
+      rgba(0, 0, 0, 0.8)),
+    url('./images/14.jpg');
   background-repeat: no-repeat;
+
   background-size: cover;
 }
 

@@ -1,0 +1,13 @@
+.pickaname button{
+ width: 150px;
+ height: 150px;
+ border-radius: 5px;
+ background-color: #e7a61a;
+ border: black solid 2px;
+ color:black;
+}
+
+button:hover {
+ background-color: #AEBC39;
+
+}

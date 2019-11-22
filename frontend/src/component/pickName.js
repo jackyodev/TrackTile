@@ -2,6 +2,8 @@ import React,{Component} from 'react'
 import axios from  'axios'
 
 
+import '../css/pickname.css'
+
 class PickNames extends Component {
  constructor(props) {
   super(props);
@@ -49,11 +51,12 @@ onSelection(e){
 
  render (){
   return(
-   <>
-   <h1> Pick Community Services  </h1>
+   <div className = "pickaname">
+   <h1> Pick A Volunteer</h1>
+   <h2> to sign them in</h2>
    {this.mapActiveCSList(this.state.csActiveUsers)}
-   <button onClick = {() => {this.props.setNewPerson()}}> NEW PERSON </button>
-   </>
+   <button onClick = {() => {this.props.setNewPerson()}}> ADD NEW VOLUNTEER </button>
+   </div>
 
   )
  }
