@@ -1,13 +1,11 @@
 .sign_in_form form {
  font-size: 1.3rem;
-
- height: 100;
  display: flex;
  flex-wrap: wrap;
  justify-content: center;
 }
 
-.sign_in_form form>div {
+.newForm > div{
  flex-basis: 33%;
 }
 
@@ -17,8 +15,6 @@
  padding: 10px;
 
 }
-
-
 .sign_in_form form input[type=text] {
  color: black;
  font-size: 1.2rem;

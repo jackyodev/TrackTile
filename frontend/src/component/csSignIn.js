@@ -35,9 +35,21 @@ class CSSignIn extends Component {
       total_hrs_completed: "",
       daily_total: 0,
       staff_name: "",
+      mandate_hours: "",
     }
 
+    
   }
+
+  pickedState = (prev, obj,id) =>{
+    // console.log({...prev,...obj})
+    // debugger
+    this.setState(
+      {...prev,...obj,id:id}
+    )
+    console.log(this.state)
+  }
+
 
   resetState = () => {
     this.setState({
@@ -77,7 +89,6 @@ class CSSignIn extends Component {
   }
 
   changeState = (id, value) => {
-
     switch (id) {
       case "first_name":
         this.setState({
@@ -147,7 +158,6 @@ class CSSignIn extends Component {
   }
 
   userSelection = (event) => {
-    console.log(event.target.id)
     this.setState({
       staff_name: event.target.id
     })
@@ -180,9 +190,13 @@ class CSSignIn extends Component {
     });
   }
 
+
+
   componentDidMount = () => {
     this.setTime()
   }
+
+
 
   renderForms = () => {
     if (!this.state.staff_name) {
@@ -203,7 +217,8 @@ class CSSignIn extends Component {
       return (
         <>
           <h1> New Volunteer Sign In </h1>
-          <NewForm />
+          <NewForm props = {this.state} pickedState = {this.pickedState} changeState= {this.changeState}/>
+
         </>
       )
     }

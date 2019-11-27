@@ -22,18 +22,40 @@ const getOneCSInfo = (req,res,next) =>{
     result
    }
   )
- 
- }).then((result) => {
- 
 }).catch((err) => {
  console.log(err)
 });
 
+}
+
+const addNewCS = (req,res,next) =>{
+   let body = [
+   req.body.first_name, req.body.middle_name,req.body.last_name,req.body.start_date,req.body.mandate_hours
+ ]
+ db.none(`INSERT INTO users (first_name, middle_name, last_name, start_date, mandate_hours ) VALUES ($1,$2,$3,$4,$5)`,body)
+ .then((result)=>{
+   db.any('SELECT * FROM users WHERE first_name = $1 AND middle_name = $2 AND last_name = $3 AND mandate_hours = $5',body).then((result)=>{
+  res.status(200).json(
+   {
+    id: result[0].id,
+    status: 200,
+    data: result
+   }
+  )
+   })
+ }).catch((err) => {
+  res.status(494).json(
+    {
+      message: err
+    }
+  )
+});
 
 }
 
 
   module.exports = {
    getAllActiveCS,
-   getOneCSInfo
+   getOneCSInfo,
+   addNewCS
   }

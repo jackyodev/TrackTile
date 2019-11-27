@@ -1,13 +1,42 @@
-.pickaname button{
+.pickaname button {
  width: 150px;
  height: 150px;
  border-radius: 5px;
  background-color: #e7a61a;
- border: black solid 2px;
- color:black;
+ border: black solid 3px;
+ color: black;
+
 }
 
 button:hover {
  background-color: #AEBC39;
+
+}
+
+#addnew {
+ background-color: #b1ae1b;
+}
+
+#addnew:hover {
+ background-color: #1a9c21;
+}
+
+.pickaname ul {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.pickaname ul li {
+
+ margin: 15px,
+ padding 15px;
+}
+
+
+.pickaname #id {
+ color: rgb(36, 36, 36);
+ font-size: .3rem;
+
 
 }

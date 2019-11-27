@@ -1,0 +1,12 @@
+.timeEntryForm {
+ display: flex;
+ flex-direction: row;
+}
+
+.form-row{
+ justify-content: space-evenly;
+ width: 50%;
+ flex-basis: 88%;
+ align-items: center;
+
+}
