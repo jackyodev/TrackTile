@@ -1,7 +1,9 @@
 .pickaname button {
  width: 150px;
  height: 150px;
- border-radius: 5px;
+ margin:10px;
+ padding: 10px;
+ /* border-radius: 5px; */
  background-color: #e7a61a;
  border: black solid 3px;
  color: black;

@@ -227,8 +227,11 @@ class CSSignIn extends Component {
 
   render() {
     return (
+      
       <div className = 'sign_in_form'>
+        <div> 
         {this.renderForms()}
+        </div>
       </div>
     )
   }

@@ -1,10 +1,12 @@
 .sign_in_form {
+ height: 105vh;
  text-align: center;
  background:
   linear-gradient(rgba(0, 0, 0, 0.8),
    rgba(0, 0, 0, 0.8)),
   url('../images/20.jpg');
  background-repeat: no-repeat;
+ background-position: center;
  background-size: cover;
 }
 
@@ -24,7 +26,7 @@
 }
 
 .team_leads li {
- color:black;
+ color: black;
  border: black solid 3px;
  background-color: rgb(137, 148, 39);
  width: 150px;
