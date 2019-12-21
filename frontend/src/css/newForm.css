@@ -1,45 +1,5 @@
-.sign_in_form form {
- font-size: 1.3rem;
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
-}
 
-.newForm > div{
+.newForm>div {
+ background-color: black;
  flex-basis: 33%;
-}
-
-.sign_in_form form label {
- margin-top: 10px;
- margin-bottom: 10px;
- padding: 10px;
-
-}
-.sign_in_form form input[type=text] {
- color: black;
- font-size: 1.2rem;
- padding: 12px 15px;
- border-radius: 5px;
-}
-
-#mandate_hours {
- flex-basis: 25%;
-
-}
-
-.sign_in_form form #hours_input {
- text-align: center;
- color: black;
- border-radius: 5px;
- width: 100px;
-
-}
-
-
-.sign_in_form form input[type=submit] {
- color: black;
- height: 50px;
-margin:10px;
-border-radius: 10px;
-
 }
