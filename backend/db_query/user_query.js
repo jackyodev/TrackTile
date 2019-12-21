@@ -34,7 +34,9 @@ const addNewCS = (req,res,next) =>{
  ]
  db.none(`INSERT INTO users (first_name, middle_name, last_name, start_date, mandate_hours ) VALUES ($1,$2,$3,$4,$5)`,body)
  .then((result)=>{
-   db.any('SELECT * FROM users WHERE first_name = $1 AND middle_name = $2 AND last_name = $3 AND mandate_hours = $5',body).then((result)=>{
+
+  setTimeout((result) => {
+    db.any(`SELECT * FROM users WHERE first_name = $1 AND middle_name = $2 AND last_name = $3 AND mandate_hours = $5`,body).then((result)=>{
   res.status(200).json(
    {
     id: result[0].id,
@@ -43,8 +45,10 @@ const addNewCS = (req,res,next) =>{
    }
   )
    })
+  }, 3000);
+
  }).catch((err) => {
-  res.status(494).json(
+  res.status(404).json(
     {
       message: err
     }
@@ -54,8 +58,11 @@ const addNewCS = (req,res,next) =>{
 }
 
 
-  module.exports = {
-   getAllActiveCS,
-   getOneCSInfo,
-   addNewCS
-  }
+
+
+
+module.exports = {
+getAllActiveCS,
+getOneCSInfo,
+addNewCS
+}

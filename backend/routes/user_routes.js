@@ -4,7 +4,8 @@ var router = express.Router();
 const {
 getAllActiveCS,
 getOneCSInfo,
-addNewCS
+addNewCS,
+getTodayCS
 } = require("../db_query/user_query")
 
 
@@ -12,6 +13,7 @@ addNewCS
 /* GET users listing. */
 router.post('/add', addNewCS);
 router.get('/all', getAllActiveCS);
+
 router.get('/?', getOneCSInfo);
 
 

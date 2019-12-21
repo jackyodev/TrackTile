@@ -15,6 +15,23 @@ const postLog = (req,res,next) =>{
 
 }
 
+const getTodayCS = (req,res,next) => {
+  console.log("HERE")
+   db.any("SELECT user_id, first_name, last_name, entry_date, start_time, end_time, daily_total, notes FROM log LEFT JOIN users ON user_id = users.id WHERE entry_date = (SELECT current_date)").then((result)=>{
+     res.status(200).json(
+       {
+        result
+        }
+     )
+  }).catch(err =>{
+    res.status(400)
+    res.send({
+      error: err.message
+    })
+  })
+}
+
   module.exports = {
-   postLog
+   postLog,
+   getTodayCS
   }

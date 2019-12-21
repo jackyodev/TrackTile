@@ -3,12 +3,16 @@ var express = require('express');
 var router = express.Router();
 
 const {
-postLog
+postLog,
+getTodayCS
+
 } = require("../db_query/log_query")
 
 
 
 /* POST existingUserToLog */
+router.post('/add/',postLog)
+router.get('/today/',getTodayCS);
 router.get('/', (req,res,next) => {
  return (
   res.json({
@@ -16,9 +20,6 @@ router.get('/', (req,res,next) => {
   })
  )
 })
-
-router.post('/add/',postLog)
-
 
 
 
