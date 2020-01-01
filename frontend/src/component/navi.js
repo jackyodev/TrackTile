@@ -11,11 +11,25 @@ class NavBar extends Component {
   render() {
     return (
       <div className='nav'>
-        <NavLink id="nav_menu" to="/" >Home</NavLink>
+        <div id="left">
+        <h3> <NavLink to="/home" >Community Service Tracker </NavLink></h3>
+        </div>
+        <div id="center">
+          <ul id="nav_menu">
+            <NavLink id="about" to="/about" > <li>About </li></NavLink>
+            <NavLink id="home" to="/home"><li>Home</li></NavLink>
+            <NavLink id="reports" to="/reports" ><li>Reports</li></NavLink>
+            <NavLink id="today" to="/today" > <li>Today's Volunteers</li></NavLink>
+            <NavLink id="all" to="/all" > <li>All Volunteers</li></NavLink>
+            <NavLink id="signin" to="/signin" ><li>Sign In</li></NavLink>
 
-        <NavLink id="nav_menu" to="/signin" >Sign-In</NavLink>
-        {/* <NavLink id="nav_menu" to='/lookup'>Look Up</NavLink>
-        <NavLink id="nav_menu" to="/reports" >Reports</NavLink> */}
+
+
+
+          </ul>
+        </div>
+        <div id="right">
+        </div>
       </div>
     )
   }

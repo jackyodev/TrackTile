@@ -1,27 +1,86 @@
+.app-navi {
+ position: sticky;
+ top: 0px;
+ overflow: hidden;
+z-index: 10;
+}
+
 .nav {
- min-width: 100%;
- font-family: Alata, sans-serif;
- font-size: 1.5rem;
- height: 4rem;
- width: auto;
- border: 1px solid black;
- text-align: center;
+ top: 0px;
  display: flex;
- background-color: #4C3F3A;
+ flex-direction: row;
+ justify-content: space-around;
+ align-items: center;
  -webkit-box-shadow: -1px 1px 14px -3px rgba(0, 0, 0, 0.75);
  -moz-box-shadow: -1px 1px 14px -3px rgba(0, 0, 0, 0.75);
- box-shadow: -1px 1px 14px -3px rgba(0, 0, 0, 0.75);
+ box-shadow: -1px 1px 14px -3px rgba(224, 215, 215, 0.75);
+ font-family: Alata, sans-serif;
+ background-color: #004445;
+ }
+
+.nav #left h3 a {
+ color: white;
+ margin-bottom: 0px;
+ line-height: 0px;
+ padding: 10px;
+ /* border: 1px black solid; */
+
 }
+
+.nav #center {
+ /* background-color: 004445; */
+}
+
+.nav #right {}
 
 #nav_menu {
- justify-content: center;
- margin: auto;
+ display: flex;
+ flex-direction: row;
+ margin-bottom: 0px;
+
+}
+
+#nav_menu a li {
+ padding: 20px;
+ /* border: 1px black solid; */
+ color: white;
+}
+
+
+#nav_menu a li {
+ /* color: #004445; */
+}
+
+
+#nav_menu a {
  text-decoration: none;
- color: #AEBC39;
 }
 
-#nav_menu:hover {
- color: #F07B39;
-
+#about.active {
+ background-color: #faf5e4;
 }
 
+#reports.active {
+ background-color: #faf5e4;
+}
+
+#signin.active {
+ background-color: #faf5e4;
+}
+
+#all.active {
+ background-color: #faf5e4;
+}
+
+#today.active {
+ background-color: #faf5e4;
+}
+
+#home.active {
+ background-color: #faf5e4;
+}
+
+#nav_menu a[aria-current=page] li {
+color: black;
+/* background-color: red; */
+}

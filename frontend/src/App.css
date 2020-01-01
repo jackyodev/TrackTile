@@ -1,4 +1,15 @@
 * {
-  font-family: Alata !important;
-  color: #A1B936;
+ font-family: Alata !important;
+ color: #004445;
+}
+
+#root{
+ height: calc(100vh - 65px);
+ background-color: #faf5e4;
+}
+
+
+.app-render {
+ position: relative;
+ height: 100%;
 }
