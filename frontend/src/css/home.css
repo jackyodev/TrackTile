@@ -29,15 +29,16 @@
 }
 
 .home #home_button {
+ border: black solid 3px;
  align-self: center;
  display: inline-block;
  color: white;
  text-decoration: none;
+ padding: 10px;
  font-size: 2rem;
  background-color: #004445;
  text-align: center;
  width: 20rem;
- height: 3rem;
 }
 
 .home #home_button:hover {
@@ -45,7 +46,7 @@
 }
 
 .home-right {
-margin-top: 5vh;
+ margin-top: 5vh;
 }
 
 #right-container h2 {
@@ -60,6 +61,7 @@ margin-top: 5vh;
 }
 
 #right-container ul li {
+ border: black solid 3px;
  margin: 10px;
  padding: 10px;
  min-width: 100px;
