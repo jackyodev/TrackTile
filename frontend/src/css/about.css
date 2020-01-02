@@ -1,0 +1,21 @@
+.about_container {
+ min-height: 50vh;
+ margin-top: 100px;
+ display: flex;
+ flex-direction: column;
+}
+
+.about_container h1 {
+ text-align: center;
+ width: 50%;
+ align-self: center;
+
+}
+
+.about_container .about_text {
+ text-align: justify;
+ align-self: center;
+ margin: 10px;
+ width: 50%;
+ padding: 15px;
+}

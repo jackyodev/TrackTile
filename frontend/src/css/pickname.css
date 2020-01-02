@@ -1,44 +1,38 @@
-.pickaname button {
- width: 150px;
- height: 150px;
- margin:10px;
- padding: 10px;
- /* border-radius: 5px; */
- background-color: #e7a61a;
- border: black solid 3px;
- color: black;
-
-}
-
-button:hover {
- background-color: #AEBC39;
-
-}
-
-#addnew {
- background-color: #b1ae1b;
-}
-
-#addnew:hover {
- background-color: #1a9c21;
-}
-
 .pickaname ul {
  display: flex;
  flex-wrap: wrap;
  justify-content: center;
 }
 
-.pickaname ul li {
-
- margin: 15px,
- padding 15px;
+.pickaname #id {
+ color: #000000;
+ font-size: 1rem;
 }
 
+.pickaname ul li {
+ max-width: 250px;
+ width: 15rem;
+ margin: 10px;
+ padding: 10px;
+ background-color: #beb18b;
+ border: black solid 3px;
+ color: black;
+}
 
-.pickaname #id {
- color: rgb(36, 36, 36);
- font-size: .3rem;
+.pickaname ul li:hover {
+ background-color: #f8b400;
+}
 
+#addnew {
+ width: 150px;
+ margin: 10px;
+ padding: 10px;
+ background-color: #004445;
+ border: black solid 3px;
+ font-style: oblique;
+ color: white;
+}
 
+#addnew:hover {
+ background-color: #2cb833;
 }

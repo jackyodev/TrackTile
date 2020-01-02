@@ -12,18 +12,14 @@ class PickNames extends Component {
     }
   }
 
-
   onSelection(e) {
     this.props.getSingleUserInfo(e.currentTarget.value)
   }
 
   mapActiveCSList(a) {
-    console.log(a)
     if (a) {
       let elMap = a.map((el, i) =>
-        <li key={i}>
-          <button value={el.id} onClick={(e) => { this.onSelection(e) }} key={i} > {el.first_name} {el.middle_name} {el.last_name}<sup id="id">{el.id}</sup> <br></br> ({el.mandate_hours}hrs)
-    </button>
+          <li value={el.id} onClick={(e) => { this.onSelection(e) }} key={i} > {el.first_name} {el.middle_name} {el.last_name}<sup id="id">{el.id}</sup> <br></br> ({el.mandate_hours}hrs)
         </li>
       )
 
@@ -55,8 +51,8 @@ class PickNames extends Component {
   render() {
     return (
       <div className="pickaname">
-        <h1> Pick A Volunteer</h1>
-        <h2> to sign them in</h2>
+        <h1> Pick a Volunteer Name</h1>
+        <p> Step 2: Choose the Volunteer. If new click on "Add New Volunteer".</p>
         {this.mapActiveCSList(this.state.csActiveUsers)}
 
       </div>

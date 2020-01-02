@@ -1,15 +1,19 @@
 * {
- font-family: Alata !important;
+ /* font-family: Alata !important; */
  color: #004445;
 }
 
-#root{
- height: calc(100vh - 65px);
+#root {
+ /* height: calc(100vh - 65px); */
+ height: 100%;
  background-color: #faf5e4;
 }
 
-
-.app-render {
- position: relative;
- height: 100%;
+.overlay {
+ background-color: #faf5e4;
+ position: fixed;
+ top: 0px;
+ height: 100vh;
+ width: 100vw;
+ z-index: -1;
 }

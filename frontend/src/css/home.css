@@ -1,12 +1,14 @@
 .home {
+ /* background:
+  linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.616)), url('../images/2.jpg');
+ background-repeat: no-repeat;
+ background-size: cover; */
  position: relative;
- /* top: 10px; */
  background-color: #faf5e4;
  display: grid;
  height: 100%;
  grid-template-columns: 50% 50%;
  text-align: center;
- /* z-index: 2; */
 }
 
 .home-left {
@@ -19,8 +21,8 @@
 #left_container {
  margin: 10px;
  padding: 10px;
- width: 500px;
-
+ min-width: 500px;
+ min-height: 400px;
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -42,7 +44,9 @@
  background-color: #2c786c;
 }
 
-.home-right {}
+.home-right {
+margin-top: 5vh;
+}
 
 #right-container h2 {
  margin: 10px;
@@ -50,18 +54,17 @@
 }
 
 #right-container ul {
- overflow: scroll;
+ overflow: auto;
  display: grid;
- grid-template-columns: 25% 25% 25% 25% 25%;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 #right-container ul li {
  margin: 10px;
  padding: 10px;
- border: 1px solid black;
- min-width: 150px;
- min-height: 150px;
- background-color: #e7a61a;
+ min-width: 100px;
+ min-height: 100px;
+ background-color: #f8b400;
 
 }
 

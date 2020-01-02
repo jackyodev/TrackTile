@@ -14,6 +14,7 @@ import NewForm from "./newForm.js"
 //CSS Imports:
 import '../css/navi.css'
 import '../css/cssignin.css'
+import '../css/signform.css'
 
 const user_logo = require('../images/user_icon_1.png')
 
@@ -164,7 +165,7 @@ class CSSignIn extends Component {
   }
 
   userSelectForm = (event) => {
-    let array = ["User 1", "User 2", "User 3", "User 4", "User 5"];
+    let array = ["Lead 1", "Lead 2", "Lead 3", "Lead 4", "Lead 5", "Lead 6", "Lead 7", "Lead 8", "Lead 9", "Lead 10"];
 
     let listUser = array.map((user, i) =>
       <div id = {user} key = {i}> <li id = {user}> {user} 
@@ -172,15 +173,16 @@ class CSSignIn extends Component {
       </div>);
 
     return (
-      <>
-        <h1> Team Lead</h1>
+      <div className = "lead_selection">
+        <h1> Team Lead Selection </h1>
+        <p> Step 1: Select the Lead signing in the volunteer.</p>
         <ul className="team_leads" onClick={(e) => {
         this.userSelection(e)
       }
       } >
           {listUser}
         </ul>
-      </>
+      </div>
     )
   }
 
@@ -229,7 +231,7 @@ class CSSignIn extends Component {
     return (
       
       <div className = 'sign_in_form'>
-        <div> 
+        <div className = "sign_in_container"> 
         {this.renderForms()}
         </div>
       </div>

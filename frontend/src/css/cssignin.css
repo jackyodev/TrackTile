@@ -1,41 +1,45 @@
 .sign_in_form {
- height: 105vh;
  text-align: center;
- background:
-  linear-gradient(rgba(0, 0, 0, 0.8),
-   rgba(0, 0, 0, 0.8)),
-  url('../images/20.jpg');
- background-repeat: no-repeat;
- background-position: center;
- background-size: cover;
+}
+
+.sign_in_container {
+ padding-top: 4%;
 }
 
 .sign_in_form h1 {
- font-size: 5rem;
- color: #AEBC39;
+ font-size: 2.6rem;
 }
 
-.sign_in_form h2 {
- font-size: 3rem;
- color: #AEBC39;
+.lead_selection {
+ display: flex;
+ flex-direction: column;
 }
 
 .team_leads {
  display: flex;
  justify-content: center;
+ flex-wrap: wrap;
+ width: 50%;
+ align-self: center;
 }
 
 .team_leads li {
  color: black;
  border: black solid 3px;
- background-color: rgb(137, 148, 39);
- width: 150px;
- height: 150px;
+ background-color: #beb18b;
+ width: 13rem;
+ max-width: 250px;
  margin: 10px;
  padding: 10px;
 }
 
 .team_leads li:hover {
  background-color: #e7a61a;
-
 }
+
+/* background: linear-gradient(rgba(0, 0, 0, 0.8),
+ rgba(0, 0, 0, 0.8)),
+url('../images/20.jpg');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover; */

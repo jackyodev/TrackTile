@@ -59,7 +59,7 @@ class Home extends Component {
    <div className="home">
     <div className="home-left">
      <div id="left_container">
-      <h1>Community Service Tracker</h1>
+      <h1>Community Service Log</h1>
       <p>A simple and quick web application to sign in your community volunteers tracker for your organization.</p>
       <NavLink id="home_button" to="/signin"> Start </NavLink>
      </div>

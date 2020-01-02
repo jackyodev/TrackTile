@@ -23,7 +23,6 @@
  flex-basis: 25%;
 
 }
-
 .sign_in_form form #hours_input {
  text-align: center;
  color: black;
@@ -31,8 +30,6 @@
  width: 100px;
 
 }
-
-
 .sign_in_form form input[type=submit] {
  color: black;
  height: 50px;
@@ -40,7 +37,6 @@
  border-radius: 10px;
 
 }
-
 
 .timeEntryForm {
  display: flex;
