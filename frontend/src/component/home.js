@@ -67,7 +67,13 @@ class Home extends Component {
     <div className="home-right">
     <div id = "right-container"> 
       <h2> Current Volunteers:</h2>
-      <ul>{this.mapTodayCS(this.state.today)} </ul>
+      <ul>
+      <li> John Smith 8:00 AM to 6:00 PM</li>
+      <li> Jane Smith 12:00 PM to 5:00 PM </li>
+      <li> Jonna Smith 2:00 PM to 5:00 PM</li>
+
+      {this.mapTodayCS(this.state.today)}
+      </ul>
     </div>
     </div>
    </div>

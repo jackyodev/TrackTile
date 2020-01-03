@@ -15,6 +15,7 @@ import NewForm from "./newForm.js"
 import '../css/navi.css'
 import '../css/cssignin.css'
 import '../css/signform.css'
+import '../css/timeentry.css'
 
 const user_logo = require('../images/user_icon_1.png')
 
@@ -219,6 +220,7 @@ class CSSignIn extends Component {
       return (
         <>
           <h1> New Volunteer Sign In </h1>
+          <p> Step: 2A: All information required below. </p>
           <NewForm props = {this.state} pickedState = {this.pickedState} changeState= {this.changeState}/>
 
         </>

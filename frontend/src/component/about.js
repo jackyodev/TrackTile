@@ -10,8 +10,8 @@ const about = () => {
     <h1> About This Web App</h1>
   <div className = "about_text">
 
-    <h3><strong>What is Community Services Logger?</strong></h3>
-    <p>Community Services Logger is an app to assist with the repetitive task of signing-in volunteers without disturbing the current adapted workflow of the organization.</p>
+    <h3><strong>What is Community Services Log?</strong></h3>
+    <p>Community Services Log is an app to assist with the repetitive task of signing-in volunteers without disturbing the current adapted workflow of the organization.</p>
 
     <h3><strong>Problem/Situation:</strong></h3>
     <p>

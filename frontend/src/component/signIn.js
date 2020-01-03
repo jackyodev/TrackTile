@@ -72,30 +72,29 @@ class SignIn extends Component {
         <h1> Volunteer Time Form </h1>
         <p> Step 3: Please fill in the form. All fields are required*. Click "Submit" when done.</p>
         <Form className='timeEntryForm' onSubmit={e => { this.submitButton(e) }}>
-          <Form.Row>
-            <Form.Group>
+        <div className = "Names">
+            <h3 id= "form_title"> Name </h3>
+            <Form.Group className = "first_name">
               <Form.Label> First Name </Form.Label>
               <Form.Control value={props.first_name} id="first_name" type="text" placeholder="First Name" onChange={(event) => {
-
               }} onBlur={(event) => {
                 this.formChange(event)
               }}></Form.Control>
             </Form.Group>
-
-            <Form.Group>
+            
+            <Form.Group className="middle_name">
               <Form.Label>Middle Name</Form.Label>
               <Form.Control value={props.middle_name} id="middle_name" type="text" placeholder="Middle Name" onBlur={(e) => {
                 this.formChange(e)
               }}></Form.Control>
             </Form.Group>
 
-            <Form.Group>
+            <Form.Group className="last_name">
               <Form.Label>Last Name</Form.Label>
               <Form.Control value={props.last_name} id="last_name" type="text" placeholder="Last Name" onBlur={(e) => { this.formChange(e) }} ></Form.Control>
             </Form.Group>
-          </Form.Row>
-
-          <Form.Row>
+            <br></br>
+            <h3 id= "form_title"> Time / Notes</h3>
             <Form.Group>
               <Form.Label> Time In </Form.Label>
               <Form.Control id="time_in" onBlur={(e) => {
@@ -107,24 +106,22 @@ class SignIn extends Component {
               <Form.Label> Time Out </Form.Label>
               <Form.Control id="time_out" type="time" placeholder="Time Out" onBlur={() => this.computeDailyTotal()} onChange={(e) => { this.formChange(e); }}></Form.Control>
             </Form.Group>
-
+         
             <Form.Group>
               <Form.Label>Badge #</Form.Label>
               <Form.Control id="badge_number" type="text" maxLength="2" placeholder="##" onBlur={(e) => { this.formChange(e) }}></Form.Control>
             </Form.Group>
-          </Form.Row>
+          
 
-          <Form.Row>
-            <h3> Daily Total:</h3>
-            <h3> {props.daily_total.toFixed(2)} </h3>
+            <text>
+
+            </text>
+
+            <h3> Daily Total: {props.daily_total.toFixed(2)} </h3>
 
             <Form.Control size='xs' type="submit" label="Submit" >
             </Form.Control>
-
-          </Form.Row>
-
-
-
+            </div>
         </Form>
 
 

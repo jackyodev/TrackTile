@@ -1,4 +1,7 @@
-.sign_in_form form {
+
+
+
+/* .sign_in_form form {
  font-size: 1.3rem;
  display: flex;
  flex-wrap: wrap;
@@ -23,6 +26,7 @@
  flex-basis: 25%;
 
 }
+
 .sign_in_form form #hours_input {
  text-align: center;
  color: black;
@@ -30,13 +34,10 @@
  width: 100px;
 
 }
-.sign_in_form form input[type=submit] {
- color: black;
- height: 50px;
- margin: 10px;
- border-radius: 10px;
 
-}
+
+
+
 
 .timeEntryForm {
  display: flex;
@@ -49,4 +50,4 @@
  flex-basis: 88%;
  align-items: center;
 
-}
+} */
