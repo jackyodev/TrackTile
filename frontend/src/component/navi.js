@@ -12,7 +12,7 @@ class NavBar extends Component {
     return (
       <div className='nav'>
         <div id="left">
-        <h3> <NavLink to="/home" >Community Service Log </NavLink></h3>
+        <h3> <NavLink to="/home" >Volunteer Service Log </NavLink></h3>
         </div>
         <div id="center">
           <ul id="nav_menu">
