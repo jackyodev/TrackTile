@@ -1,7 +1,7 @@
 {
   "name": "cslogger",
   "version": "1.0.0",
-  "description": "",
+  "description": "volunteer logger",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -18,12 +18,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JJGITTY2018/cslogger"
+    "url": "git+https://github.com/JJGITTY2018/cslogger.git"
   },
-  "author": "",
+  "author": "jackyo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JJGITTY2018/cslogger/issues"
   },
-  "homepage": "https://github.com/JJGITTY2018/cslogger#readme"
+  "homepage": "https://github.com/JJGITTY2018/cslogger#readme",
+  "keywords": [
+    "volunteer",
+    "web",
+    "app",
+    "tracker",
+    "logger"
+  ]
 }
