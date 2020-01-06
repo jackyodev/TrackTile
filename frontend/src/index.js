@@ -7,12 +7,10 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from "react-router-dom"
 
 //CSS
-import './index.css';
+// import './index.css';
 
 //Containers
 import App from './App';
-
-
 
 
 
