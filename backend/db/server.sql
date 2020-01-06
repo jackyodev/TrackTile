@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS cslogger;
-CREATE DATABASE cslogger;
+-- DROP DATABASE IF EXISTS cslogger;
+-- CREATE DATABASE cslogger;
 
-\c cslogger;
+-- \c cslogger;
 
 CREATE TABLE users
 (
