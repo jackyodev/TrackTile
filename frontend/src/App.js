@@ -6,10 +6,11 @@ import { withRouter } from "react-router";
 import { Switch, Route, Link } from "react-router-dom";
 
 //css 
+import './css/reset.css'
+import './css/App.css';
 
 
 //components
-import './App.css';
 import Navi from './component/navi.js'
 import CSSignin from './component/csSignIn.js'
 import Home from './component/home.js'
