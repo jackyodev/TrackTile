@@ -37,7 +37,7 @@ class App extends Component {
           <Switch>
             <Route path="/about" render = {about} />
             <Route path="/signin" component={CSSignin} />
-            <Route path="/" component = {Home} />
+            <Route path="/*" component = {Home} />
           </Switch>
         </div>
 

@@ -72,7 +72,7 @@ class CSSignIn extends Component {
 
 
   getSingleUserInfo = (id) => {
-    axios.get(`/users/?id=${id}`).then((res) => {
+    axios.get(`/api/users/?id=${id}`).then((res) => {
       let { result } = res.data;
       console.log(result)
       this.setState({

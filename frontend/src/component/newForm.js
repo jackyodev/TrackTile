@@ -28,7 +28,7 @@ class NewForm extends Component {
       start_date: this.props.props.today_date,
       mandate_hours: this.state.mandate_hours,
     }
-    Axios.post('/users/add/', params).then((res) => {
+    Axios.post('/api/users/add/', params).then((res) => {
       console.log(res)
       debugger
 

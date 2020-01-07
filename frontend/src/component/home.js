@@ -24,7 +24,7 @@ class Home extends Component {
  }
 
  getToday = () => {
-  Axios.get('/log/today').then((res) => {
+  Axios.get('/api/log/today').then((res) => {
    console.log(res)
    this.setState({
     today: res.data.result

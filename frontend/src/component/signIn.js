@@ -36,7 +36,7 @@ class SignIn extends Component {
     }
     event.preventDefault()
     console.log(this.props)
-    Axios.post('/log/add', params).then(() => {
+    Axios.post('/api/log/add', params).then(() => {
       this.props.resetState()
     })
   }
