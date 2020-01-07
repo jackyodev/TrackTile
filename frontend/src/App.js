@@ -35,8 +35,8 @@ class App extends Component {
             <Navi />
           </div>
           <Switch>
-            <Route path="/about" render = {about} />
-            <Route path="/signin" component={CSSignin} />
+            <Route exact path="/about" render = {about} />
+            <Route exact path="/signin" component={CSSignin} />
             <Route path="/*" component = {Home} />
           </Switch>
         </div>
