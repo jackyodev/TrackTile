@@ -25,7 +25,6 @@ class Home extends Component {
 
  getToday = () => {
   Axios.get('/api/log/today').then((res) => {
-   console.log(res)
    this.setState({
     today: res.data.result
    }
@@ -36,17 +35,23 @@ class Home extends Component {
 
 
  mapTodayCS = (array) => {
-  let elMap = array.map((el, i) => {
-   return (
-     <li id="volunteer" key = {i}> 
-     <img src = {user_logo} width= "25px"/>
-      <p> {el.first_name} {el.last_name} </p>
-     <p>{this.convert24(el.start_time)} to {this.convert24(el.end_time)} </p>
-     </li>
-   )
-  })
 
-  return elMap
+  if(this.state.today){
+    let elMap = array.map((el, i) => {
+      return (
+        <li id="volunteer" key={i}>
+          <img alt = "user_icon" src={user_logo} width="25px" />
+          <p> {el.first_name} {el.last_name} </p>
+          <p>{this.convert24(el.start_time)} to {this.convert24(el.end_time)} </p>
+        </li>
+      )
+    })
+
+    return elMap
+  }
+  else{
+    return <h1> No Volunteers Today.</h1>
+  }
  }
 
  componentDidMount() {
@@ -71,7 +76,6 @@ class Home extends Component {
       <li> John Smith 8:00 AM to 6:00 PM</li>
       <li> Jane Smith 12:00 PM to 5:00 PM </li>
       <li> Jonna Smith 2:00 PM to 5:00 PM</li>
-
       {this.mapTodayCS(this.state.today)}
       </ul>
     </div>

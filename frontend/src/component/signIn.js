@@ -10,9 +10,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class SignIn extends Component {
-  constructor(props) {
-    super(props);
-  }
 
 
   formChange = (event) => {

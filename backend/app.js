@@ -31,8 +31,8 @@ if (process.env.NODE_ENV === 'production') {
 
 //incoming path:
 app.use('/', indexRouter);
-app.use('/log',logRouter)
-app.use('/users', usersRouter);
+app.use('/api/log',logRouter)
+app.use('/api/users', usersRouter);
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/../frontend/build/index.html"));

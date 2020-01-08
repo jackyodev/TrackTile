@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 //add-on
 import { withRouter } from "react-router";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 //css 
 import './css/reset.css'

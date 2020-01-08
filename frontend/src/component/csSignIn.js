@@ -1,6 +1,6 @@
 // Add On:
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -74,7 +74,6 @@ class CSSignIn extends Component {
   getSingleUserInfo = (id) => {
     axios.get(`/api/users/?id=${id}`).then((res) => {
       let { result } = res.data;
-      console.log(result)
       this.setState({
         id: id,
         first_name: result.first_name,
@@ -84,7 +83,7 @@ class CSSignIn extends Component {
         mandate_hours: result.mandate_hours
       })
     }).then(() => {
-      console.log(this.state)
+      console.log("GotSingleUserInfo")
     }).catch(err => {
       console.log(err)
     })
@@ -144,6 +143,11 @@ class CSSignIn extends Component {
         })
         break;
 
+        default:{
+          this.setState({
+            ...value
+          })
+        }
     }
   }
 
@@ -170,7 +174,7 @@ class CSSignIn extends Component {
 
     let listUser = array.map((user, i) =>
       <div id = {user} key = {i}> <li id = {user}> {user} 
-       <img id = {user} src = {user_logo} width = "100px" /></li>
+       <img alt = "team_lead_icon" id = {user} src = {user_logo} width = "100px" /></li>
       </div>);
 
     return (
