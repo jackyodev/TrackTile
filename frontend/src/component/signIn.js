@@ -81,14 +81,14 @@ class SignIn extends Component {
             
             <Form.Group className="middle_name">
               <Form.Label>Middle Name</Form.Label>
-              <Form.Control value={props.middle_name} id="middle_name" type="text" placeholder="Middle Name" onBlur={(e) => {
+              <Form.Control value={props.middle_name} id="middle_name" type="text" placeholder="Middle Name" onChange={(e) => {
                 this.formChange(e)
               }}></Form.Control>
             </Form.Group>
 
             <Form.Group className="last_name">
               <Form.Label>Last Name</Form.Label>
-              <Form.Control value={props.last_name} id="last_name" type="text" placeholder="Last Name" onBlur={(e) => { this.formChange(e) }} ></Form.Control>
+              <Form.Control value={props.last_name} id="last_name" type="text" placeholder="Last Name" onChange={(e) => { this.formChange(e) }} ></Form.Control>
             </Form.Group>
             <br></br>
             <h3 id= "form_title"> Time / Notes</h3>
@@ -108,12 +108,7 @@ class SignIn extends Component {
               <Form.Label>Badge #</Form.Label>
               <Form.Control id="badge_number" type="text" maxLength="2" placeholder="##" onBlur={(e) => { this.formChange(e) }}></Form.Control>
             </Form.Group>
-          
-
-            <text>
-
-            </text>
-
+        
             <h3> Daily Total: {props.daily_total.toFixed(2)} </h3>
 
             <Form.Control size='xs' type="submit" label="Submit" >
