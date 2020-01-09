@@ -13,8 +13,8 @@
  padding-left: 25px;
  border-radius: 25px;
  overflow: hidden;
- width: 15vw;
- min-width: 10vw;
+ width: 25vw;
+ min-width: 200px;
  width: 40%;
  max-width: 15vw;
  outline: none;
@@ -48,4 +48,36 @@ input[type=search]:hover {
 
 .cs_container button:active {
  background: rgb(17, 101, 104);
+}
+
+
+.volunteers {
+ display: flex;
+ flex-direction: row;
+ text-align: left;
+ margin: 0px;
+ padding: 0px;
+ padding-top: 10px;
+ text-align: center;
+}
+
+.volunteers li {
+ background-color: #beb18b;
+ margin: auto;
+ padding: 10px;
+ border: 3px solid black;
+ width: 10rem;
+ height: 6rem;
+ max-width: 200px;
+ max-height: 200px;
+ overflow: scroll;
+}
+
+.volunteers li:hover {
+ background-color: #e7a61a;
+}
+
+.volunteers p {
+ padding-top: 10px;
+ line-height: 0px;
 }
