@@ -33,7 +33,7 @@ class PickNames extends Component {
   }
 
   getActiveCS() {
-    axios.get('/api/users/all').then((res) => {
+    axios.get('/api/users/active').then((res) => {
       this.setState({
         csActiveUsers: res.data.users
       })

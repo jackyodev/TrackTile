@@ -14,6 +14,21 @@ const getAllActiveCS = (req,res,next) =>{
  });
 }
 
+const getAllCS = (req, res, next) => {
+  db.any('SELECT first_name, last_name, start_date, mandate_hours, id FROM users ORDER BY start_date DESC').then((result) => {
+    res.status(200).json(
+      {
+        status: 200,
+        users: result
+      }
+    )
+  }).catch((err) => {
+    status: 400;
+    message: err.message
+  });
+}
+
+
 const getOneCSInfo = (req,res,next) =>{
  db.one(`SELECT * FROM users where id = ${req.query.id}`).then((result)=>{
   res.status(200).json(
@@ -63,6 +78,8 @@ const addNewCS = (req,res,next) =>{
 
 module.exports = {
 getAllActiveCS,
+getAllCS,
 getOneCSInfo,
-addNewCS
+addNewCS,
+
 }

@@ -9,14 +9,12 @@ import { Switch, Route } from "react-router-dom";
 import './css/reset.css'
 import './css/App.css';
 
-
 //components
 import Navi from './component/navi.js'
 import CSSignin from './component/csSignIn.js'
 import Home from './component/home.js'
-
-import about from "./component/about.js"
-
+import About from "./component/about.js"
+import Volunteers from "./component/volunteers.js"
 
 class App extends Component {
   constructor(props) {
@@ -35,7 +33,8 @@ class App extends Component {
             <Navi />
           </div>
           <Switch>
-            <Route exact path="/about" render = {about} />
+            <Route exact path="/all" render={Volunteers} />
+            <Route exact path="/about" render = {About} />
             <Route exact path="/signin" component={CSSignin} />
             <Route path="/*" component = {Home} />
           </Switch>

@@ -5,15 +5,16 @@ const {
 getAllActiveCS,
 getOneCSInfo,
 addNewCS,
-getTodayCS
+getTodayCS,
+ getAllCS
 } = require("../db_query/user_query")
 
 
 
 /* GET users listing. */
 router.post('/add', addNewCS);
-router.get('/all', getAllActiveCS);
-
+router.get('/active', getAllActiveCS);
+router.get('/all', getAllCS)
 router.get('/?', getOneCSInfo);
 
 

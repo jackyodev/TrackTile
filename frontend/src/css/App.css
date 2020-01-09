@@ -3,6 +3,12 @@
  color: #004445;
 }
 
+*:focus {
+ outline: none;
+ border-color: black;
+ box-shadow: 0 0 10px #37d8d0;
+}
+
 #root {
  /* height: calc(100vh - 65px); */
  height: 100%;

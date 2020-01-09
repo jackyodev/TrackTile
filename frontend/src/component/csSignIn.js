@@ -40,14 +40,14 @@ class CSSignIn extends Component {
       mandate_hours: "",
     }
 
-    
+
   }
 
-  pickedState = (prev, obj,id) =>{
+  pickedState = (prev, obj, id) => {
     // console.log({...prev,...obj})
     // debugger
     this.setState(
-      {...prev,...obj,id:id}
+      { ...prev, ...obj, id: id }
     )
     console.log(this.state)
   }
@@ -143,11 +143,11 @@ class CSSignIn extends Component {
         })
         break;
 
-        default:{
-          this.setState({
-            ...value
-          })
-        }
+      default: {
+        this.setState({
+          ...value
+        })
+      }
     }
   }
 
@@ -173,18 +173,18 @@ class CSSignIn extends Component {
     let array = ["Lead 1", "Lead 2", "Lead 3", "Lead 4", "Lead 5", "Lead 6", "Lead 7", "Lead 8", "Lead 9", "Lead 10"];
 
     let listUser = array.map((user, i) =>
-      <div id = {user} key = {i}> <li id = {user}> {user} 
-       <img alt = "team_lead_icon" id = {user} src = {user_logo} width = "100px" /></li>
-      </div>);
+      <li id={user} key={i}> <div id={user}> {user}
+        <img alt="team_lead_icon" id={user} src={user_logo} width="100px" /></div>
+      </li>);
 
     return (
-      <div className = "lead_selection">
+      <div className="lead_selection">
         <h1> Team Lead Selection </h1>
         <p> Step 1: Select the Lead signing in the volunteer.</p>
         <ul className="team_leads" onClick={(e) => {
-        this.userSelection(e)
-      }
-      } >
+          this.userSelection(e)
+        }
+        } >
           {listUser}
         </ul>
       </div>
@@ -225,7 +225,7 @@ class CSSignIn extends Component {
         <>
           <h1> New Volunteer Sign In </h1>
           <p> Step: 2A: All information required below. </p>
-          <NewForm props = {this.state} pickedState = {this.pickedState} changeState= {this.changeState}/>
+          <NewForm props={this.state} pickedState={this.pickedState} changeState={this.changeState} />
 
         </>
       )
@@ -235,10 +235,10 @@ class CSSignIn extends Component {
 
   render() {
     return (
-      
-      <div className = 'sign_in_form'>
-        <div className = "sign_in_container"> 
-        {this.renderForms()}
+
+      <div className='sign_in_form'>
+        <div className="sign_in_container">
+          {this.renderForms()}
         </div>
       </div>
     )
