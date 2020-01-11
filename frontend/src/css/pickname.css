@@ -14,13 +14,13 @@
  width: 15rem;
  margin: 10px;
  padding: 10px;
- background-color: #beb18b;
  border: black solid 3px;
+ background-color: #f8b400;
  color: black;
 }
 
 .pickaname ul li:hover {
- background-color: #f8b400;
+ background-color: #beb18b;
 }
 
 #addnew {

@@ -1,7 +1,7 @@
 
-export default class Time {
+export default class Function {
 
- convert24 = (time) => {
+ convert24to12= (time) => {
   var hours = time[0] + time[1]
   var AmOrPm = hours >= 12 ? 'pm' : 'am';
   hours = (hours % 12) || 12;

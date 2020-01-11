@@ -15,7 +15,7 @@ import CSSignin from './component/csSignIn.js'
 import Home from './component/home.js'
 import About from "./component/about.js"
 import Volunteers from "./component/volunteers.js"
-import Today from "./component/today.js"
+import Month from "./component/month.js"
 
 class App extends Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class App extends Component {
             <Navi />
           </div>
           <Switch>
-            <Route exact path="/today" render={Today} />
+            <Route exact path="/summary" render={Month} />
             <Route exact path="/all" render={Volunteers} />
             <Route exact path="/about" render = {About} />
             <Route exact path="/signin" component={CSSignin} />

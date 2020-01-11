@@ -22,14 +22,15 @@
  width: 50%;
  align-self: center;
  margin: 0px;
- padding:0px;
+ padding: 0px;
 
 }
 
 .team_leads li {
  color: black;
  border: black solid 3px;
- background-color: #beb18b;
+ background-color: #e7a61a;
+
 
  max-width: 250px;
  padding: 6px;
@@ -37,7 +38,7 @@
 }
 
 .team_leads li:hover {
- background-color: #e7a61a;
+ background-color: #beb18b;
 }
 
 /* background: linear-gradient(rgba(0, 0, 0, 0.8),

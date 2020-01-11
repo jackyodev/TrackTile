@@ -12,7 +12,6 @@ class Volunteers extends Component {
   }
  }
 
-
  mapAllCS = () => {
 
   let map = this.state.volunteers.map((el, i) => {
@@ -27,8 +26,10 @@ class Volunteers extends Component {
 
   return (
    <>
-    <h1> Volunteers: </h1>
+   <br></br>
+    <h2> Volunteers: </h2>
     <ul className="volunteers">{map}</ul>
+
    </>
   )
 
@@ -64,7 +65,6 @@ class Volunteers extends Component {
      <input type="search" placeholder="Name..." />
      <button> Submit </button>
     </div>
-  
     {this.mapAllCS()}
    </div>
   )

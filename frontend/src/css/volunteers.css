@@ -13,17 +13,15 @@
  padding-left: 25px;
  border-radius: 25px;
  overflow: hidden;
- width: 25vw;
- min-width: 200px;
- width: 40%;
- max-width: 15vw;
+ width: 30vw;
+ max-width: 25vw;
  outline: none;
  border: 2px solid #004445;
 
 }
 
 input[type=search]:focus {
- max-width: 25vw;
+ max-width: 30vw;
 }
 
 input[type=search]:hover {
@@ -59,11 +57,13 @@ input[type=search]:hover {
  padding: 0px;
  padding-top: 10px;
  text-align: center;
+ width: 70vw;
+ align-self: center;
 }
 
 .volunteers li {
- background-color: #beb18b;
- margin: auto;
+ background-color: #e7a61a;
+ margin: 10px;
  padding: 10px;
  border: 3px solid black;
  width: 10rem;
@@ -74,7 +74,9 @@ input[type=search]:hover {
 }
 
 .volunteers li:hover {
- background-color: #e7a61a;
+
+ background-color: #beb18b;
+
 }
 
 .volunteers p {
