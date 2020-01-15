@@ -1,6 +1,6 @@
 .cs_container {
  min-height: 50vh;
- margin-top: 4%;
+ margin-top: 5vh;
  display: flex;
  flex-direction: column;
  text-align: center;
@@ -52,13 +52,13 @@ input[type=search]:hover {
 .volunteers {
  display: flex;
  flex-direction: row;
+ flex-wrap: wrap;
  text-align: left;
  margin: 0px;
- padding: 0px;
+ padding-inline-start: 0px;
  padding-top: 10px;
  text-align: center;
- width: 70vw;
- align-self: center;
+ justify-content: center;
 }
 
 .volunteers li {
@@ -66,9 +66,9 @@ input[type=search]:hover {
  margin: 10px;
  padding: 10px;
  border: 3px solid black;
- width: 10rem;
- height: 6rem;
- max-width: 200px;
+ /* width: 10rem; */
+ /* height: 6rem; */
+ min-width: 200px;
  max-height: 200px;
  overflow: scroll;
 }

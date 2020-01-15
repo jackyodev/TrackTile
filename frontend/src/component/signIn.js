@@ -5,7 +5,6 @@ import Form from 'react-bootstrap/Form'
 
 //css
 import '../css/signform.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class SignIn extends Component {
@@ -59,7 +58,6 @@ class SignIn extends Component {
     this.props.setTime()
   }
 
-
   render() {
     let { props } = this.props
     return (
@@ -106,8 +104,7 @@ class SignIn extends Component {
               <Form.Label>Badge #</Form.Label>
               <Form.Control id="badge_number" type="text" maxLength="2" placeholder="##" onBlur={(e) => { this.formChange(e) }}></Form.Control>
             </Form.Group>
-        
-            <h3> Daily Total: {props.daily_total.toFixed(2)} </h3>
+            <div> Daily Total: {props.daily_total.toFixed(2)} </div>
 
             <Form.Control size='xs' type="submit" label="Submit" >
             </Form.Control>

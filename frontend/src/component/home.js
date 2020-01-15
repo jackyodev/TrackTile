@@ -40,9 +40,8 @@ class Home extends Component {
       let elMap = array.map((el, i) => {
         return (
           <li id="volunteer" key={i}>
-            <img alt="user_icon" src={user_logo} width="25px" />
-            <p> {el.first_name} {el.last_name} </p>
-            <p>{this.convert24(el.start_time)} to {this.convert24(el.end_time)} </p>
+
+            <p> {el.first_name} {el.last_name} -- {this.convert24(el.start_time)} to {this.convert24(el.end_time)} </p>
           </li>
         )
       })
@@ -71,11 +70,10 @@ class Home extends Component {
         </div>
         <div className="home-right">
           <div id="right-container">
-            <h2> Current Volunteers:</h2>
-            <ul>
-              <li> John Smith 8:00 AM to 6:00 PM</li>
-              <li> Jane Smith 12:00 PM to 5:00 PM </li>
-              <li> Jonna Smith 2:00 PM to 5:00 PM</li>
+            <h2> Today Volunteers: </h2>
+            <ul className = "today-list">
+              <li> Ex: John Smith 8:00 AM to 6:00 PM</li>
+              <li> Ex: Jane Smith 12:00 PM to 5:00 PM </li>
               {this.mapTodayCS(this.state.today)}
             </ul>
           </div>

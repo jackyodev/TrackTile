@@ -25,7 +25,7 @@ class CSSignIn extends Component {
     super(props);
 
     this.state = {
-      id: "",
+      id: undefined,
       first_name: "",
       middle_name: "",
       last_name: "",
@@ -44,6 +44,8 @@ class CSSignIn extends Component {
   }
 
   pickedState = (prev, obj, id) => {
+    console.log(prev,obj,id)
+    debugger
     // console.log({...prev,...obj})
     // debugger
     this.setState(
@@ -52,6 +54,11 @@ class CSSignIn extends Component {
     console.log(this.state)
   }
 
+  modifyState = (key,value) =>{
+    this.setState({
+      [key] : value
+    })
+  }
 
   resetState = () => {
     this.setState({
@@ -196,14 +203,9 @@ class CSSignIn extends Component {
       new: true
     });
   }
-
-
-
   componentDidMount = () => {
     this.setTime()
   }
-
-
 
   renderForms = () => {
     if (!this.state.staff_name) {
@@ -214,19 +216,27 @@ class CSSignIn extends Component {
         <PickNames changeState={this.changeState} getSingleUserInfo={this.getSingleUserInfo} setNewPerson={this.setNewPerson} />
       )
     }
-    else if (this.state.first_name !== "") {
+    else if (this.state.first_name !== "" && this.state.id !== undefined) {
       return (
         <SignIn props={this.state} changeState={this.changeState} setTime={this.setTime} resetState={this.resetState} />
       )
     }
-
     else if (this.state.new === true) {
       return (
         <>
           <h1> New Volunteer Sign In </h1>
           <p> Step: 2A: All information required below. </p>
-          <NewForm props={this.state} pickedState={this.pickedState} changeState={this.changeState} />
+          <NewForm props={this.state} pickedState={this.pickedState}
+          modifyState = {this.modifyState}
+          changeState={this.changeState} />
+        </>
+      )
+    }
 
+    else if (this.state.new === "adding"){
+      return (
+        <> 
+        <h1> Adding ... </h1>
         </>
       )
     }

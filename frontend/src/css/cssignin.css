@@ -3,7 +3,7 @@
 }
 
 .sign_in_container {
- padding-top: 4%;
+ padding-top: 5vh;
 }
 
 .sign_in_form h1 {
@@ -19,7 +19,7 @@
  display: flex;
  justify-content: center;
  flex-wrap: wrap;
- width: 50%;
+ width: 80vw;
  align-self: center;
  margin: 0px;
  padding: 0px;

@@ -17,7 +17,7 @@ class Volunteers extends Component {
   let map = this.state.volunteers.map((el, i) => {
    return (
     <li key={el.id} className="volunteer">
-     <p id = "id">id: {el.id} </p>
+     <p id="id">id: {el.id} </p>
      <p>{el.first_name} {el.last_name}</p>
      <p>{el.mandate_hours} hours</p>
     </li>
@@ -26,7 +26,7 @@ class Volunteers extends Component {
 
   return (
    <>
-   <br></br>
+    <br></br>
     <h2> Volunteers: </h2>
     <ul className="volunteers">{map}</ul>
 

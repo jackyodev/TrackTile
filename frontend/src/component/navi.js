@@ -16,8 +16,8 @@ class NavBar extends Component {
         </div>
         <div id="center">
           <ul id="nav_menu">
-            <NavLink id="about" to="/about" > <li>About </li></NavLink>
             <NavLink id="home" to="/home"><li>Home</li></NavLink>
+            <NavLink id="about" to="/about" > <li>About </li></NavLink>
             <NavLink id="summary" to="/summary" > <li>Summary</li></NavLink>
             <NavLink id="all" to="/all" > <li>All Volunteers</li></NavLink>
             <NavLink id="signin" to="/signin" ><li>Sign In</li></NavLink>

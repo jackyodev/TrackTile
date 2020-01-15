@@ -41,7 +41,7 @@
  grid-column-end: 5;
  font-size: 150%;
  border-bottom: 1px solid darkgreen;
- : bold;
+ border-bottom: 1px solid darkgreen;
 }
 
 
@@ -61,6 +61,7 @@
 
 .sign_in_form form input[type=submit] {
  margin: 10px;
+ margin-left: 0px;
  grid-column: span 2;
  border: 1px black solid;
  min-height: 50px;

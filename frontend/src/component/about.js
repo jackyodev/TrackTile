@@ -16,9 +16,9 @@ const about = () => {
     <h3><strong>Problem/Situation:</strong></h3>
     <p>
      The organization requires a simple solution to log their community volunteers. Compared to traditional pen and paper, there is a limited administrative resource to back enter volunteers that visited each day. The adopted setup has been with a simple excel sheet which alleviates the administrative task required. Yet, with adapted setup the organization still faced with inadequate data entry due to different "team leads", entries error, and insufficient time to produce a report.</p>
-    <h3><strong>Needs/Limitation:</strong></h3>
+    <h3><strong> Current Features:</strong></h3>
+    <h3><strong>Future Updates:</strong></h3>
 
-    <h3><strong>Features:</strong></h3>
    </div>
   </div>
    

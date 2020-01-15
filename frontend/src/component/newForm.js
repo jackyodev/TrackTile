@@ -7,10 +7,8 @@ class NewForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
     }
   }
-
 
   localOnChange = (event) => {
     this.setState({
@@ -27,12 +25,14 @@ class NewForm extends Component {
       last_name: this.state.last_name,
       start_date: this.props.props.today_date,
       mandate_hours: this.state.mandate_hours,
+      new: 'adding'
     }
-    Axios.post('/api/users/add/', params).then((res) => {
-      console.log(res)
-      debugger
 
-      this.props.pickedState(props, params, res.data.id)
+    this.props.modifyState('new',
+    'adding')
+    Axios.post('/api/users/add/', params).then((res) => {
+      this.props.pickedState(props, params, res.data[0].id)
+      this.props.modifyState('new','false')
     }).catch(err => { console.log(err) })
 
   }
@@ -45,7 +45,6 @@ class NewForm extends Component {
             <div className="label">First Name</div>
             <input type="text" placeholder="First Name" />
           </div>
-
           <div id="middle_name">
             <div className="label">Middle Name</div>
             <input type="text" placeholder="Middle Name" />
@@ -55,12 +54,10 @@ class NewForm extends Component {
             <div className="label">Last Name</div>
             <input type="text" placeholder="Last Name" />
           </div>
-
           <div id="mandate_hours">
             <div className="label">Mandate Hours:</div>
-            <input id="hours_input" pattern="\d*" maxLength="2" type="text" placeholder = "##"/>
+            <input id="hours_input" pattern="\d*" maxLength="2" type="text" placeholder="##" />
           </div>
-
           <input id="submit" type="submit" onClick={(event) => { this.submitClick(event) }} />
 
         </form>
