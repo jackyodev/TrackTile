@@ -31,7 +31,6 @@ class PickNames extends Component {
           true)
           this.props.changeState('pageStatus', 'newCS')
           
-          
           }}> Add New Volunteer </button>
           {elMap}
         </ul>

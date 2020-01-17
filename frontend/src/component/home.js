@@ -3,7 +3,7 @@ import Axios from 'axios';
 import { withRouter } from 'react-router'
 import { NavLink } from 'react-router-dom';
 import '../css/home.css'
-const user_logo = require('../images/user_icon_1.png')
+// const user_logo = require('../images/user_icon_1.png')
 
 
 class Home extends Component {

@@ -1,7 +1,7 @@
 const { db } = require("../db/server.js")
 
 const getAllActiveCS = (req, res, next) => {
-  db.any('SELECT * FROM users WHERE COMPLETED = false ORDER BY last_active_date DESC').then((result) => {
+  db.any('SELECT * FROM users WHERE COMPLETED = false ORDER BY id DESC').then((result) => {
     res.status(200).json(
       {
         status: 200,
