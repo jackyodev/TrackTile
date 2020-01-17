@@ -25,7 +25,14 @@ class PickNames extends Component {
 
       return (
         <ul>
-          <button id="addnew" onClick={() => { this.props.setNewPerson() }}> Add New Volunteer </button>
+          <button id="addnew" onClick={() => { 
+            
+            this.props.changeState('new',
+          true)
+          this.props.changeState('pageStatus', 'newCS')
+          
+          
+          }}> Add New Volunteer </button>
           {elMap}
         </ul>
       )
@@ -33,20 +40,18 @@ class PickNames extends Component {
   }
 
   getActiveCS() {
-    axios.get('/api/users/active').then((res) => {
-      this.setState({
-        csActiveUsers: res.data.users
+      axios.get('/api/users/active').then((res) => {
+        this.setState({
+          csActiveUsers: res.data.users
+        })
+      }).catch((err) => {
+        console.log(err)
       })
-    }).catch((err) => {
-      console.log(err)
-    })
   }
-
 
   componentDidMount() {
     this.getActiveCS()
   }
-
 
   render() {
     return (

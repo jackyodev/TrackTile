@@ -38,7 +38,6 @@ class Volunteers extends Component {
 
  getAllCS = () => {
   axios.get('/api/users/all').then((result) => {
-   console.log(result);
    if (result.status === 200) {
     this.setState({
      volunteers: result.data.users

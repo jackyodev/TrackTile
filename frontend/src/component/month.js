@@ -26,7 +26,7 @@ class Month extends Component {
    startDate: '2019/12/12',
    endDate: '2020/01/31'
   }).then( result =>{
-   console.log(result)
+   console.log('Range //' )
   })
  }
 
@@ -34,7 +34,6 @@ class Month extends Component {
   this.setState({
    startDate: date
   });
-  console.log(this.state)
  }
 
 handleEndDate = (date) => {

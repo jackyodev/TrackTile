@@ -31,9 +31,9 @@ const getTodayCS = (req, res, next) => {
 }
 
 const getRangeData = (req, res, next) => {
-  console.log(req.params)
+  // console.log(req.params)
   db.any('SELECT entry_date,users.id, first_name, last_name, start_date, start_time, end_time, daily_total FROM users LEFT JOIN log ON users.id = log.user_id WHERE entry_date BETWEEN ${startDate} AND ${endDate}', req.body).then((result => {
-    console.log(res)
+    // console.log(res)
   }))
 }
 

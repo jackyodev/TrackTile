@@ -38,20 +38,14 @@ class CSSignIn extends Component {
       daily_total: 0,
       staff_name: "",
       mandate_hours: "",
+      pageStatus: "start"
     }
-
-
   }
 
   pickedState = (prev, obj, id) => {
-    console.log(prev,obj,id)
-    debugger
-    // console.log({...prev,...obj})
-    // debugger
     this.setState(
       { ...prev, ...obj, id: id }
     )
-    console.log(this.state)
   }
 
   modifyState = (key,value) =>{
@@ -62,7 +56,7 @@ class CSSignIn extends Component {
 
   resetState = () => {
     this.setState({
-      id: "",
+      id: undefined,
       first_name: "",
       middle_name: "",
       last_name: "",
@@ -74,6 +68,7 @@ class CSSignIn extends Component {
       total_hrs_completed: "",
       daily_total: 0,
       staff_name: "",
+      pageStatus: "start"
     })
   }
 
@@ -87,10 +82,11 @@ class CSSignIn extends Component {
         middle_name: result.middle_name,
         last_name: result.last_name,
         total_hrs_completed: result.accumulative_hours,
-        mandate_hours: result.mandate_hours
+        mandate_hours: result.mandate_hours,
+        pageStatus: 'csSignIn'
       })
     }).then(() => {
-      console.log("GotSingleUserInfo")
+      // console.log("GotSingleUserInfo")
     }).catch(err => {
       console.log(err)
     })
@@ -150,6 +146,15 @@ class CSSignIn extends Component {
         })
         break;
 
+      case "pageStatus":
+        this.setState({
+          pageStatus: value
+        })
+
+      // console.log(this.state)
+      
+        break;
+
       default: {
         this.setState({
           ...value
@@ -170,13 +175,14 @@ class CSSignIn extends Component {
     })
   }
 
-  userSelection = (event) => {
+  leadSelection = (event) => {
     this.setState({
-      staff_name: event.target.id
+      staff_name: event.target.id,
+      pageStatus: 'pickCS'
     })
   }
 
-  userSelectForm = (event) => {
+  leadSelectForm = (event) => {
     let array = ["Lead 1", "Lead 2", "Lead 3", "Lead 4", "Lead 5", "Lead 6", "Lead 7", "Lead 8", "Lead 9", "Lead 10"];
 
     let listUser = array.map((user, i) =>
@@ -189,7 +195,7 @@ class CSSignIn extends Component {
         <h1> Team Lead Selection </h1>
         <p> Step 1: Select the Lead signing in the volunteer.</p>
         <ul className="team_leads" onClick={(e) => {
-          this.userSelection(e)
+          this.leadSelection(e)
         }
         } >
           {listUser}
@@ -198,48 +204,71 @@ class CSSignIn extends Component {
     )
   }
 
-  setNewPerson = () => {
-    this.setState({
-      new: true
-    });
-  }
+  // setNewPerson = () => {
+  //   this.setState({
+  //     new: true
+  //   });
+  // }
+
+
   componentDidMount = () => {
     this.setTime()
   }
 
   renderForms = () => {
-    if (!this.state.staff_name) {
-      return (this.userSelectForm())
+    
+    let {staff_name, pageStatus} = this.state
+    
+    if ( pageStatus === "adding") {
+      return (
+        <>
+          <h1> Adding ... </h1>
+        </>
+      )
     }
-    else if (this.state.new === false && this.state.first_name === "") {
+
+    else if (pageStatus === "loading") {
+      return (
+        <>
+          <h1> Loading ... </h1>
+        </>
+      )
+    }
+
+    //lead selection form
+    else if ( pageStatus === "start" && staff_name === "") {
+      return (this.leadSelectForm())
+    }
+
+    // pick a volunteer name
+    else if (staff_name !== "" && pageStatus === "pickCS") {
       return (
         <PickNames changeState={this.changeState} getSingleUserInfo={this.getSingleUserInfo} setNewPerson={this.setNewPerson} />
       )
     }
-    else if (this.state.first_name !== "" && this.state.id !== undefined) {
-      return (
-        <SignIn props={this.state} changeState={this.changeState} setTime={this.setTime} resetState={this.resetState} />
-      )
-    }
-    else if (this.state.new === true) {
+
+    //new volunteer fill form
+    else if (this.state.new === true && pageStatus === 'newCS') {
       return (
         <>
           <h1> New Volunteer Sign In </h1>
           <p> Step: 2A: All information required below. </p>
           <NewForm props={this.state} pickedState={this.pickedState}
-          modifyState = {this.modifyState}
-          changeState={this.changeState} />
+            modifyState={this.modifyState}
+            changeState={this.changeState} />
         </>
       )
     }
 
-    else if (this.state.new === "adding"){
+    else if (this.state.id !== undefined && pageStatus === "csSignIn") {
       return (
-        <> 
-        <h1> Adding ... </h1>
-        </>
+        <SignIn props={this.state} changeState={this.changeState} setTime={this.setTime} resetState={this.resetState} />
       )
     }
+
+
+
+
 
   }
 

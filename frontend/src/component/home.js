@@ -33,7 +33,6 @@ class Home extends Component {
 
   }
 
-
   mapTodayCS = (array) => {
 
     if (this.state.today) {

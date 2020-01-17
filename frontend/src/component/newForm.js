@@ -25,15 +25,19 @@ class NewForm extends Component {
       last_name: this.state.last_name,
       start_date: this.props.props.today_date,
       mandate_hours: this.state.mandate_hours,
-      new: 'adding'
+      new: 'true',
+      pageStatus: 'csSignIn'
     }
 
-    this.props.modifyState('new',
+    this.props.modifyState('pageStatus',
     'adding')
+
     Axios.post('/api/users/add/', params).then((res) => {
-      this.props.pickedState(props, params, res.data[0].id)
-      this.props.modifyState('new','false')
-    }).catch(err => { console.log(err) })
+      
+        this.props.pickedState(props, params, res.data[0].id)
+
+    })
+    .catch(err => { console.log(err) })
 
   }
 

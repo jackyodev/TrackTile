@@ -57,7 +57,7 @@ const addNewCS = (req, res, next) => {
         }
         )
       })
-  console.log('ADD NEW CS')
+  // console.log('ADD NEW CS')
 }
 
 const returnID = (req, res, next) => {
@@ -65,7 +65,6 @@ const returnID = (req, res, next) => {
     req.body.first_name, req.body.middle_name, req.body.last_name, req.body.start_date, req.body.mandate_hours
   ]
     db.any(`SELECT * FROM users WHERE first_name = $1 AND last_name = $3 AND mandate_hours = $5 ORDER BY ID DESC LIMIT 1`, body).then((result) => {
-      console.log('THIS IS RESULT =>', result)
       res.status(201).json(result)
     }).catch(err=>{
       console.log(err)

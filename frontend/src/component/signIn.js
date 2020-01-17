@@ -16,7 +16,6 @@ class SignIn extends Component {
   }
 
   submitButton = (event) => {
-    console.log(this.props)
     let { props } = this.props
     let params = {
       user_id: props.id,
@@ -26,12 +25,18 @@ class SignIn extends Component {
       notes: props.badge_number,
       daily_total: props.daily_total,
       staff_name: props.staff_name
-
     }
+
     event.preventDefault()
-    console.log(this.props)
+
+    //post cs information and return to lead page.
+
     Axios.post('/api/log/add', params).then(() => {
-      this.props.resetState()
+      this.props.changeState('pageStatus', 'adding')
+      setTimeout(() => {
+        this.props.resetState()
+     
+      }, 1000);
     })
   }
 
