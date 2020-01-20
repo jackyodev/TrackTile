@@ -8,13 +8,23 @@ class Volunteers extends Component {
  constructor(props) {
   super(props)
   this.state = {
-   volunteers: []
+   volunteers: [],
+   type: "first_name",
+   filteredVolunteers: []
   }
  }
 
  mapAllCS = () => {
 
-  let map = this.state.volunteers.map((el, i) => {
+  if(this.state.filteredVolunteers.length === 0){
+   var array = this.state.volunteers
+  }
+  else {
+    array = this.state.filteredVolunteers
+  }
+
+
+  let map = array.map((el, i) => {
    return (
     <li key={el.id} className="volunteer">
      <p id="id">id: {el.id} </p>
@@ -33,6 +43,35 @@ class Volunteers extends Component {
    </>
   )
 
+ }
+ 
+ typeSelection = (event) =>{
+  this.setState({
+   type: event.target.value
+  })
+ }
+
+ searchChecker = (element) => {
+  if(element.first_name === this.state.term){
+   return true
+  }
+  else return false
+ }
+ 
+
+ filtersVolunteers = (array,query,type) =>{
+
+  let filter = array.filter( obj => 
+    obj[`${type}`].toLowerCase().indexOf(query.toLowerCase()) !== -1
+  )
+  this.setState({
+   filteredVolunteers: filter
+  })
+}
+
+
+ onChangeSearch = (event) =>{
+  this.filtersVolunteers(this.state.volunteers,event.target.value,this.state.type)
  }
 
 
@@ -61,8 +100,13 @@ class Volunteers extends Component {
    <div className="cs_container">
     <h1>All Volunteers</h1>
     <div className="searchbox">
-     <input type="search" placeholder="Name..." />
-     <button> Submit </button>
+     <select id='option' onChange={this.typeSelection}> 
+     <option value = 'first_name' > First Name
+     </option>
+      <option value='last_name' > Last Name
+      </option>
+    </select>
+     <input type="search" onChange = {this.onChangeSearch}placeholder="Search..." />
     </div>
     {this.mapAllCS()}
    </div>

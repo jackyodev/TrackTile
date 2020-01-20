@@ -6,6 +6,7 @@
  text-align: center;
 }
 
+
 .searchbox input[type=search] {
  transition: max-width .8s ease-in-out;
  margin: 10px;
@@ -13,20 +14,21 @@
  padding-left: 25px;
  border-radius: 25px;
  overflow: hidden;
- width: 30vw;
+ /* width: 20vw; */
  max-width: 25vw;
  outline: none;
  border: 2px solid #004445;
 
 }
 
-input[type=search]:focus {
+/* input[type=search]:focus {
  max-width: 30vw;
 }
 
 input[type=search]:hover {
  max-width: 30vw;
-}
+} */
+
 
 .cs_container button {
  background-color: #004445;
