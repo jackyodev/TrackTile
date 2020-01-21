@@ -31,14 +31,72 @@ const getTodayCS = (req, res, next) => {
 }
 
 const getRangeData = (req, res, next) => {
-  // console.log(req.params)
-  db.any('SELECT entry_date,users.id, first_name, last_name, start_date, start_time, end_time, daily_total FROM users LEFT JOIN log ON users.id = log.user_id WHERE entry_date BETWEEN ${startDate} AND ${endDate}', req.body).then((result => {
-    // console.log(res)
-  }))
+  db.any(`SELECT entry_date,users.id, first_name, last_name, start_date, start_time, end_time, daily_total FROM users LEFT JOIN log ON users.id = log.user_id WHERE entry_date BETWEEN '${req.query.startDate}' AND '${req.query.endDate}'`)
+    .then(
+      result => {
+        res.status(200).json({
+          result
+        })
+      })
+    .catch(err => {
+      res.status(500).json({
+        error: err.message
+      })
+    })
+}
+
+
+const getRangeSum = (req, res, next) => {
+  db.any(`SELECT SUM(daily_total) FROM users LEFT JOIN log ON users.id = log.user_id WHERE entry_date BETWEEN '${req.query.startDate}' AND '${req.query.endDate}'`)
+    .then(
+      result => {
+        res.status(200).json({
+          result
+        })
+      })
+    .catch(err => {
+      res.status(500).json({
+        error: err.message
+      })
+    })
+}
+
+const getRangeCount = (req, res, next) => {
+  db.any(`SELECT COUNT(entry_date) FROM users LEFT JOIN log ON users.id = log.user_id WHERE entry_date BETWEEN '${req.query.startDate}' AND '${req.query.endDate}'`)
+    .then(
+      result => {
+        res.status(200).json({
+          result
+        })
+      })
+    .catch(err => {
+      res.status(500).json({
+        error: err.message
+      })
+    })
+}
+
+const getRangeUsersCount = (req, res, next) => {
+  db.any(`SELECT COUNT(DISTINCT(users.id)) FROM users LEFT JOIN log ON users.id = log.user_id WHERE entry_date BETWEEN '${req.query.startDate}' AND '${req.query.endDate}'`)
+    .then(
+      result => {
+        res.status(200).json({
+          result
+        })
+      })
+    .catch(err => {
+      console.log(err)
+      res.status(500).json({
+        error: err.message
+      })
+    })
 }
 
 module.exports = {
   postLog,
   getTodayCS,
-  getRangeData
+  getRangeData,
+  getRangeSum,
+  getRangeCount,
+  getRangeUsersCount
 }

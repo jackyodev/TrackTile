@@ -1,12 +1,61 @@
-.monthContainer{
+.monthContainer {
  text-align: center;
  width: 100%;
- height:100%;
+ height: 100%;
  margin-top: 4%;
 }
 
+.start_end {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+}
 
-.summaryBody{
-margin-top: 4%;
+#startDate {
+ /* margin: 10px; */
+ padding: 10px;
+}
 
+#endDate {
+ margin: 10px;
+}
+
+.react-datepicker__input-container {
+ padding-left: 1vw;
+}
+
+.summaryBody {
+ display: flex;
+ flex-direction: column;
+
+}
+
+#total_summary {
+ align-self: center;
+ border-bottom: 1px solid black;
+ border-top: 1px solid black;
+ margin: 1.2rem ;
+ display: flex;
+
+}
+
+#total_summary strong {
+ margin: 1%;
+}
+
+.summaryBody #list {
+ width: 66vw;
+ align-self: center;
+ font-weight: bolder;
+}
+
+.summaryBody #list p {
+ font-weight: 900 !important;
+
+}
+
+
+.summaryBody p {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
