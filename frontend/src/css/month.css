@@ -34,7 +34,7 @@
  align-self: center;
  border-bottom: 1px solid black;
  border-top: 1px solid black;
- margin: 1.2rem ;
+ margin: 1.2rem;
  display: flex;
 
 }
@@ -49,9 +49,12 @@
  font-weight: bolder;
 }
 
-.summaryBody #list p {
- font-weight: 900 !important;
-
+.summaryBody #list #title {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+ color: black;
+ padding: 2vh;
+ border-bottom: 1px black solid;
 }
 
 

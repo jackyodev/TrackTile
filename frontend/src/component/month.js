@@ -4,12 +4,14 @@ import Axios from 'axios'
 
 import '../css/month.css'
 
-// import Function from './function'
+import Function from './function'
 
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 
 let d = new Date()
+
+let time = new Function()
 
 class Month extends Component {
  constructor(props) {
@@ -56,13 +58,16 @@ class Month extends Component {
     sumResults,
     usersCountResults
    })
-  })).then(console.log(this.state))
+  })).then(
+
+  )
    .catch(err => {
     console.log(err)
    })
  }
 
  handleStartDate = (date) => {
+
   this.setState({
    startDate: date
   });
@@ -70,6 +75,10 @@ class Month extends Component {
  }
 
  handleEndDate = (date) => {
+  let yy = date.getFullYear() 
+  let mm = date.getMonth() + 1
+  let dd = date.getDate()
+  
   this.setState({
    endDate: date
   });
@@ -104,22 +113,22 @@ class Month extends Component {
 
    <div> {el.first_name} </div>
    <div> {el.last_name} </div>
-    <div> {el.start_time} </div>
-    <div> {el.end_time} </div>
+    <div> {time.convert24to12(el.start_time)} </div>
+    <div> {time.convert24to12(el.end_time)} </div>
     <div> {el.daily_total}hrs </div>
 
    </p>
   ))
 
   return <div id="list">
-   <p>
+   <div id= "title">
     <div> First Name</div>
     <div> Last Name </div>
     <div> Start Time </div>
     <div> End Time</div>
     <div> Daily Hour </div>
 
-   </p>
+   </div>
   {map}
   </div>
  }
