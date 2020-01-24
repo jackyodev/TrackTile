@@ -25,6 +25,8 @@ const CSSignin = lazy(()=> import('./component/csSignIn'))
 const Month = lazy(()=> import('./component/month'))
 const Volunteers = lazy(()=> import('./component/volunteers'))
 
+const Volunteer = lazy(() => import('./component/volunteer'))
+
 
 
 class App extends Component {
@@ -49,7 +51,8 @@ class App extends Component {
               <Route exact path="/all" component={Volunteers} />
               <Route exact path="/about" component={About} />
               <Route exact path="/signin" component={CSSignin} />
-              <Route exact path= "/*" component={Home} />
+              <Route path = "/volunteer/:id/" component = {Volunteer} />
+              <Route path= "/*" component={Home} />
           </Switch>
             </Suspense>
         </div>

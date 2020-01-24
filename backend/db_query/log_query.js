@@ -30,6 +30,19 @@ const getTodayCS = (req, res, next) => {
   })
 }
 
+const getCSLog = (req,res,next) => {
+  let id = req.params.id
+  db.any(`SELECT * from LOG WHERE USER_ID = '${id}'`).then( result => {
+    res.status(200).json({
+      result
+    })
+  }).catch(err =>{
+    res.status(500).json({
+      error : err
+    })
+  })
+}
+
 const getRangeData = (req, res, next) => {
   db.any(`SELECT entry_date,users.id, first_name, last_name, start_date, start_time, end_time, daily_total FROM users LEFT JOIN log ON users.id = log.user_id WHERE entry_date BETWEEN '${req.query.startDate}' AND '${req.query.endDate}'`)
     .then(
@@ -94,6 +107,7 @@ const getRangeUsersCount = (req, res, next) => {
 
 module.exports = {
   postLog,
+  getCSLog,
   getTodayCS,
   getRangeData,
   getRangeSum,

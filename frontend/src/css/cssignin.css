@@ -7,7 +7,7 @@
 }
 
 .sign_in_form h1 {
- font-size: 2.6rem;
+ font-size: 2rem;
 }
 
 .lead_selection {
@@ -28,11 +28,10 @@
 
 .team_leads li {
  color: black;
- border: black solid 3px;
+ border: black solid 2px;
  background-color: #e7a61a;
-
-
- max-width: 250px;
+ max-width: 200px;
+ max-height: 200px;
  padding: 6px;
  margin: 10px;
 }

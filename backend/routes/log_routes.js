@@ -4,6 +4,7 @@ var router = express.Router();
 
 const {
  postLog,
+ getCSLog,
  getTodayCS,
  getRangeData,
  getRangeSum,
@@ -19,6 +20,8 @@ router.get('/dates/', getRangeData);
 router.get('/dates/sum/', getRangeSum);
 router.get('/dates/count/', getRangeCount);
 router.get('/dates/count/users', getRangeUsersCount);
+router.get('/users/:id', getCSLog);
+;
 
 
 router.get('/', (req, res, next) => {

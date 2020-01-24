@@ -14,6 +14,11 @@ class Volunteers extends Component {
   }
  }
 
+ onClickVolunteer = (event) =>{
+   let num = event.currentTarget.id
+   this.props.history.push(`/volunteer/${num}`)
+ }
+
  mapAllCS = () => {
 
   if(this.state.filteredVolunteers.length === 0){
@@ -26,7 +31,7 @@ class Volunteers extends Component {
 
   let map = array.map((el, i) => {
    return (
-    <li key={el.id} className="volunteer">
+    <li onClick={ event => {this.onClickVolunteer(event)} } id = {el.id} key={el.id} className="volunteer">
      <p id="id">id: {el.id} </p>
      <p>{el.first_name} {el.last_name}</p>
      <p>{el.mandate_hours} hours</p>
@@ -39,7 +44,6 @@ class Volunteers extends Component {
     <br></br>
     <h2> Volunteers: </h2>
     <ul className="volunteers">{map}</ul>
-
    </>
   )
 

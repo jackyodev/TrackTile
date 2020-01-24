@@ -10,6 +10,7 @@ import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 
 let d = new Date();
+d.setDate(d.getDate() - 31);
 
 let time = new converter();
 
@@ -35,8 +36,6 @@ class Month extends Component {
    endDate = this.state.endRange
   }
   else{
-   console.log(this.state.startDate)
-   debugger
    startDate = this.state.startDate.toLocaleDateString()
    
    endDate = this.state.endDate.toLocaleDateString()
@@ -160,8 +159,6 @@ class Month extends Component {
 
 
  render() {
-  console.log(this.state)
-
   return (
    <div className="monthContainer">
     <h1> Summary</h1>
