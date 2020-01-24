@@ -4,21 +4,21 @@ import Axios from 'axios'
 
 import '../css/month.css'
 
-import Function from './function'
+import converter from './function'
 
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 
-let d = new Date()
+let d = new Date();
 
-let time = new Function()
+let time = new converter();
 
 class Month extends Component {
  constructor(props) {
   super(props)
   this.state = ({
    endDate: new Date(),
-   startDate: d.setDate(d.getDate() - 31),
+   startDate: d,
    dataResults: [],
    countResults: "",
    sumResults: "",
@@ -26,8 +26,23 @@ class Month extends Component {
  }
 
  getRangeSet = () => {
-  let startDate = "12/02/2019"
-  let endDate = "01/31/2020"
+
+  let startDate;
+  let endDate;
+
+  if(this.state.startRange && this.state.endRange){
+   startDate = this.state.startRange
+   endDate = this.state.endRange
+  }
+  else{
+   console.log(this.state.startDate)
+   debugger
+   startDate = this.state.startDate.toLocaleDateString()
+   
+   endDate = this.state.endDate.toLocaleDateString()
+
+  }
+
 
   let params = {
    params: {
@@ -67,20 +82,26 @@ class Month extends Component {
  }
 
  handleStartDate = (date) => {
+  let yy = date.getFullYear();
+  let mm = date.getMonth() + 1;
+  let dd = date.getDate();
 
   this.setState({
-   startDate: date
+   startDate: date,
+   startRange: `${yy}/${mm}/${dd}`
+
   });
 
  }
 
  handleEndDate = (date) => {
-  let yy = date.getFullYear() 
+  let yy = date.getFullYear()
   let mm = date.getMonth() + 1
   let dd = date.getDate()
-  
+
   this.setState({
-   endDate: date
+   endDate: date,
+   endRange: `${yy}/${mm}/${dd}`
   });
  };
 
@@ -109,19 +130,23 @@ class Month extends Component {
 
  renderList = () => {
   let map = this.state.dataResults.map((el, i) => (
-   <p key = {i}> 
+   <div id="row" key={i}>
+    <div> {time.sliceSQLDate(el.entry_date)} </div>
 
-   <div> {el.first_name} </div>
-   <div> {el.last_name} </div>
+    <div> {el.id} </div>
+    <div> {el.first_name} </div>
+    <div> {el.last_name} </div>
     <div> {time.convert24to12(el.start_time)} </div>
     <div> {time.convert24to12(el.end_time)} </div>
     <div> {el.daily_total}hrs </div>
 
-   </p>
+   </div>
   ))
 
   return <div id="list">
-   <div id= "title">
+   <div id="title">
+    <div> Date </div>
+    <div> User ID </div>
     <div> First Name</div>
     <div> Last Name </div>
     <div> Start Time </div>
@@ -129,7 +154,7 @@ class Month extends Component {
     <div> Daily Hour </div>
 
    </div>
-  {map}
+   {map}
   </div>
  }
 

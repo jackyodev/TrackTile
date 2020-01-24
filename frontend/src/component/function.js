@@ -10,4 +10,16 @@ export default class Function {
   return finalTime
  }
 
+ sliceSQLDate = (longdate) =>{
+  let date = longdate.slice(0,10)
+  return date
+ }
+
+ outputYMD= (longdate) =>{
+  let yy = longdate.getFullYear()
+  let mm = longdate.getMonth()
+  let dd = longdate.getDate()
+
+  return `${yy}/${mm}/${dd}`
+ }
 }

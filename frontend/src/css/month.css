@@ -8,6 +8,7 @@
 .start_end {
  display: flex;
  flex-direction: row;
+ flex-wrap: wrap;
  justify-content: center;
 }
 
@@ -51,14 +52,14 @@
 
 .summaryBody #list #title {
  display: grid;
- grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
  color: black;
  padding: 2vh;
  border-bottom: 1px black solid;
 }
 
 
-.summaryBody p {
+.summaryBody #row {
  display: grid;
- grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
