@@ -65,16 +65,13 @@ class Month extends Component {
    const sumResults = response[2].data.result[0].sum
 
    const usersCountResults = response[3].data.result[0].count
-
    this.setState({
     dataResults,
     countResults,
     sumResults,
     usersCountResults
    })
-  })).then(
-
-  )
+  }))
    .catch(err => {
     console.log(err)
    })
