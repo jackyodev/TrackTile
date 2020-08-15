@@ -3,7 +3,8 @@ import Axios from 'axios';
 import { withRouter } from 'react-router'
 import { NavLink } from 'react-router-dom';
 import '../css/home.css'
-// const user_logo = require('../images/user_icon_1.png')
+import image from "../images/hands.png"
+import { BsSquareHalf } from "react-icons/bs";
 
 
 class Home extends Component {
@@ -39,7 +40,6 @@ class Home extends Component {
       let elMap = array.map((el, i) => {
         return (
           <li id="volunteer" key={i}>
-
             <p> {el.first_name} {el.last_name} -- {this.convert24(el.start_time)} to {this.convert24(el.end_time)} </p>
           </li>
         )
@@ -58,25 +58,15 @@ class Home extends Component {
 
 
   render() {
+    // let image = "../images/hands.png"
     return (
       <div className="home">
-        <div className="home-left">
-          <div id="left_container">
-            <h1>Volunteer Service Log</h1>
-            <p>A simple and quick web application to sign in your community volunteers tracker for your organization.</p>
-            <NavLink id="home_button" to="/signin"> Start </NavLink>
+          <div className="left__container">
+          {/* <img src = {image} /> */}
+          <h1 className ="header" > <BsSquareHalf /> TrackTile</h1>
+          <p>TrackTile is a simple web-based application that replace traditional paper logs. </p>
+            <NavLink id="home_button" to="/signin"> Demo </NavLink>
           </div>
-        </div>
-        <div className="home-right">
-          <div id="right-container">
-            <h2> Today Volunteers: </h2>
-            <ul className = "today-list">
-              <li> Ex: John Smith 8:00 AM to 6:00 PM</li>
-              <li> Ex: Jane Smith 12:00 PM to 5:00 PM </li>
-              {this.mapTodayCS(this.state.today)}
-            </ul>
-          </div>
-        </div>
       </div>
     )
   }

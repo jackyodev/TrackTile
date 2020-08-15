@@ -1,76 +1,59 @@
 .app-navi {
  position: sticky;
  top: 0px;
- overflow: hidden;
- z-index: 10;
+ z-index: inherit;
+ background-color: ivory;
+ max-height: 50px;
 }
 
+
 .nav {
+ font-family: Alata, sans-serif;
  top: 0px;
  display: flex;
  flex-direction: row;
  justify-content: space-around;
  align-items: center;
- -webkit-box-shadow: -1px 1px 14px -3px rgba(0, 0, 0, 0.75);
- -moz-box-shadow: -1px 1px 14px -3px rgba(0, 0, 0, 0.75);
- box-shadow: -1px 1px 14px -3px rgba(224, 215, 215, 0.75);
- font-family: Alata, sans-serif;
- background-color: #004445;
+ background-color: inherit;
+ border-bottom: 1px solid black;
+ color: #004445;
 }
 
-.nav #left h3 a {
- color: white;
- margin-bottom: 0px;
- padding: 15px;
- line-height: 0px;
+
+.nav>.header {
+ display: flex;
+ align-content: center;
+ justify-content: center;
+ align-items: center;
+ font-size: min(2rem, 3.5vw);
+ color: #004445;
 }
 
-.nav #left h3 a:hover{
-text-decoration: none;
+.nav>.header:hover {
+ text-decoration: none;
+ color: coral;
+
+}
+
+.nav>.header>svg {
+ margin-right: 1vw;
 }
 
 #nav_menu {
  display: flex;
  flex-direction: row;
- margin-bottom: 0px;
+ margin: 0;
 
 }
 
-#nav_menu a li {
- padding: 20px;
- /* border: 1px black solid; */
- color: white;
+#nav_menu>li>a {
+ margin-left: 20px;
+ margin-right: 20px;
+ color: #004445;
+
 }
 
-
-#nav_menu a {
+#nav_menu>li>a:hover {
+ color: coral;
  text-decoration: none;
-}
-
-#about.active {
- background-color: #faf5e4;
-}
-
-#reports.active {
- background-color: #faf5e4;
-}
-
-#signin.active {
- background-color: #faf5e4;
-}
-
-#all.active {
- background-color: #faf5e4;
-}
-
-#summary.active {
- background-color: #faf5e4;
-}
-
-#home.active {
- background-color: #faf5e4;
-}
-
-#nav_menu a[aria-current=page] li {
- color: black;
 }
