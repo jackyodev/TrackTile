@@ -1,59 +1,57 @@
 .app-navi {
- position: sticky;
- top: 0px;
- z-index: inherit;
- background-color: ivory;
- max-height: 50px;
+  position: sticky;
+  top: 0px;
+  z-index: inherit;
+  background-color: ivory;
+  max-height: 50px;
 }
-
 
 .nav {
- font-family: Alata, sans-serif;
- top: 0px;
- display: flex;
- flex-direction: row;
- justify-content: space-around;
- align-items: center;
- background-color: inherit;
- border-bottom: 1px solid black;
- color: #004445;
+  font-family: Alata, sans-serif;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: inherit;
+  border-bottom: 1px solid black;
+  color: #004445;
 }
 
-
 .nav>.header {
- display: flex;
- align-content: center;
- justify-content: center;
- align-items: center;
- font-size: min(2rem, 3.5vw);
- color: #004445;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: min(2rem, 3.5vw);
+  color: #004445;
 }
 
 .nav>.header:hover {
- text-decoration: none;
- color: coral;
-
+  text-decoration: none;
+  color: coral;
 }
 
 .nav>.header>svg {
- margin-right: 1vw;
+  margin-right: 1vw;
 }
 
 #nav_menu {
- display: flex;
- flex-direction: row;
- margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+}
 
+#nav_menu>li{
+  margin: 10px;
 }
 
 #nav_menu>li>a {
- margin-left: 20px;
- margin-right: 20px;
- color: #004445;
-
+  color: #004445;
 }
 
 #nav_menu>li>a:hover {
- color: coral;
- text-decoration: none;
+  color: coral;
+  text-decoration: none;
 }

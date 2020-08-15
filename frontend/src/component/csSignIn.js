@@ -151,7 +151,6 @@ class CSSignIn extends Component {
           pageStatus: value
         })
 
-      // console.log(this.state)
       
         break;
 
@@ -186,8 +185,9 @@ class CSSignIn extends Component {
     let array = ["Lead 1", "Lead 2", "Lead 3", "Lead 4", "Lead 5", "Lead 6", "Lead 7", "Lead 8", "Lead 9", "Lead 10"];
 
     let listUser = array.map((user, i) =>
-      <li id={user} key={i}> <div id={user}> {user}
-        <img alt="team_lead_icon" id={user} src={user_logo} width="100px" /></div>
+      <li className= "lead__tile" key={i}>
+       {user}
+      <img alt="team_lead_icon" id={user} src={user_logo}  />
       </li>);
 
     return (

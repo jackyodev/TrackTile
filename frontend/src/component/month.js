@@ -158,8 +158,8 @@ class Month extends Component {
  render() {
   return (
    <div className="monthContainer">
-    <h1> Summary</h1>
-    <p> Select your range:</p>
+    <h1> Summary Date Report</h1>
+    <p> Select your date range:</p>
 
     <div className="start_end">
 
@@ -178,7 +178,7 @@ class Month extends Component {
        onChange={this.handleEndDate}
       />
      </div>
-     <button onClick={this.getRangeSet}>
+     <button className = "submit" onClick={this.getRangeSet}>
       Submit</button>
 
     </div>

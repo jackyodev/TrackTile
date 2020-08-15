@@ -1,48 +1,56 @@
 .sign_in_form {
- text-align: center;
+  text-align: center;
 }
 
 .sign_in_container {
- padding-top: 5vh;
+  padding-top: 5vh;
 }
 
 .sign_in_form h1 {
- font-size: 2rem;
+  font-size: 2rem;
 }
 
 .lead_selection {
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .team_leads {
- display: flex;
- justify-content: center;
- flex-wrap: wrap;
- width: 80vw;
- align-self: center;
- margin: 0px;
- padding: 0px;
-
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80vw;
+  align-self: center;
+  margin: 0px;
+  padding: 0px;
 }
 
 .team_leads li {
- color: black;
- border: black solid 2px;
- background-color: #e7a61a;
- max-width: 200px;
- max-height: 200px;
- padding: 6px;
- margin: 10px;
+  min-width: 150px;
+  border-radius: 1.5px;
+  padding: 1vw;
+  margin: 1vw;
+  background-color: ivory;
+  color: black;
+  border: 1px solid black;
 }
 
 .team_leads li:hover {
- background-color: #beb18b;
+  background-color: rgba(255, 127, 80, 0.493);
+  color: whitesmoke;
+  border: 1px solid rgb(0, 0, 0);
 }
 
-/* background: linear-gradient(rgba(0, 0, 0, 0.8),
- rgba(0, 0, 0, 0.8)),
-url('../images/20.jpg');
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover; */
+.lead__tile {
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.lead__tile>img {
+  width: 10vw;
+  padding: 10px;
+}

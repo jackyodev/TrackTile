@@ -19,11 +19,11 @@ class NavBar extends Component {
 
         <ul id="nav_menu">
 
-          <li> <NavLink to="/about" > About</NavLink>  </li>
+          {/* <li> <NavLink to="/about" > About</NavLink>  </li> */}
 
           <li> <NavLink to="/summary" >Report</NavLink></li>
 
-          <li> <NavLink to="/signin" > Clock In</NavLink></li>
+          <li> <NavLink to="/signin" >Clock-In</NavLink></li>
 
           <li> <NavLink to="/all" >Search</NavLink>  </li>
 

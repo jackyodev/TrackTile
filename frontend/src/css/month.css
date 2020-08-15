@@ -1,65 +1,77 @@
 .monthContainer {
- text-align: center;
- width: 100%;
- height: 100%;
- margin-top: 4%;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 4%;
 }
 
 .start_end {
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
- justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #startDate {
- /* margin: 10px; */
- padding: 10px;
+  padding: 10px;
 }
 
 #endDate {
- margin: 10px;
+  margin: 10px;
 }
 
 .react-datepicker__input-container {
- padding-left: 1vw;
+  padding-left: 1vw;
 }
 
 .summaryBody {
- display: flex;
- flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
 
 #total_summary {
- align-self: center;
- border-bottom: 1px solid black;
- border-top: 1px solid black;
- margin: 1.2rem;
- display: flex;
-
+  align-self: center;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  margin: 1.2rem;
+  display: flex;
 }
 
 #total_summary strong {
- margin: 1%;
+  margin: 1%;
 }
 
 .summaryBody #list {
- width: 66vw;
- align-self: center;
- font-weight: bolder;
+  width: 66vw;
+  align-self: center;
+  font-weight: bolder;
 }
 
 .summaryBody #list #title {
- display: grid;
- grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
- color: black;
- padding: 2vh;
- border-bottom: 1px black solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  color: black;
+  padding: 2vh;
+  border-bottom: 1px black solid;
 }
 
-
 .summaryBody #row {
- display: grid;
- grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.submit {
+  padding: 1.5px;
+  margin: 1vw;
+  border-radius: 3px;
+}
+
+.submit:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 127, 80, 0.548);
+}
+
+.submit:active {
+  color: white;
+  background-color: coral;
 }
