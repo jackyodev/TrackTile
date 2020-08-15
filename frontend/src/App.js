@@ -13,9 +13,9 @@ import './css/App.css';
 //components
 
 import Navi from './component/navi.js'
+import About from "./component/about.js"
 // import CSSignin from './component/csSignIn.js'
 // import Home from './component/home.js'
-import About from "./component/about.js"
 // import Volunteers from "./component/volunteers.js"
 // import Month from "./component/month.js"
 
@@ -24,7 +24,6 @@ const Home = lazy(() => import('./component/home'))
 const CSSignin = lazy(()=> import('./component/csSignIn'))
 const Month = lazy(()=> import('./component/month'))
 const Volunteers = lazy(()=> import('./component/volunteers'))
-
 const Volunteer = lazy(() => import('./component/volunteer'))
 
 
@@ -40,12 +39,12 @@ class App extends Component {
   render() {
     return (
       <>
-        <div className="overlay"> </div>
-        <div className="app-render">
+        <div className="overlay"></div>
           <div className="app-navi">
             <Navi />
           </div>
-            <Suspense fallback={<div> Loading... </div>}>
+        <div className="app-render">
+            <Suspense fallback={<div> Loading...</div>}>
           <Switch>
               <Route exact path="/summary" component={Month} />
               <Route exact path="/all" component={Volunteers} />
