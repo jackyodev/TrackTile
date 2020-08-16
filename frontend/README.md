@@ -1,14 +1,19 @@
 
-# Welcome to TrackTile 👋
+<h1 align="center">Welcome to TrackTile 👋</h1>
 
-![Version](https://img.shields.io/badge/version-1-blue.svg?cacheSeconds=2592000)
+<p>
+
+<img  alt="Version"  src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000"  />
+
+</p>
+
+![Home Page](https://github.com/jackyodev/CommunityServicesTracker/blob/master/frontend/screencapture-ttile-herokuapp-2020-08-15-22_05_54.png?raw=true)
 
   
 
-> A simple application to replace those paper volunteer logs.
+> TrackTile is a simple web-based application that replace the traditional paper logs.
 
-## Screen Shot
-![Home Page](https://github.com/jackyodev/CommunityServicesTracker/blob/master/frontend/screencapture-ttile-herokuapp-2020-08-15-22_05_54.png?raw=true)
+  
 
 ### ✨ [Demo](https://ttile.herokuapp.com/)
 
@@ -62,13 +67,17 @@ yarn run test
 
 * Github: [@jackyodev](https://github.com/jackyodev)
 
-* LinkedIn: [@/jacky-ong](https://linkedin.com/in/jacky-ong)
+* LinkedIn: [@jacky-ong](https://linkedin.com/in/jacky-ong)
 
   
 
 ## Show your support
 
-  Give a ⭐️ if this project helped you!
+  
+
+Give a ⭐️ if this project helped you!
+
+  
 
 ***
 
